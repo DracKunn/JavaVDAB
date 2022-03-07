@@ -1,0 +1,473 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="+*}}Sbya7*p2j)7nAF7_">i</variable>
+    <variable type="" id="ow,F7gvU]W:y:l|q;5Vp">lidNaam</variable>
+    <variable type="" id="lQ.Lv_?8bMTkQLCh0|BB">leeftijd</variable>
+    <variable type="" id="FSqZnO.eyp?fe.rG799w">jaarInkomen</variable>
+    <variable type="" id="E8/3tpzUQ+`I2/#].AMM">lidgeld</variable>
+    <variable type="" id="@}?eD_G;1.7+zYu%(+RP">ledenAantal</variable>
+    <variable type="" id="}YY+jRc*TZSQ)j92}W=k">totaalLidgeld</variable>
+    <variable type="" id="cbyL0(7,Jk2N~|-tRc}[">kinderenTenLaste</variable>
+  </variables>
+  <block type="variables_set" id="tOfYB!JL`]m#??@{I!Lr" x="65" y="254">
+    <field name="VAR" id="@}?eD_G;1.7+zYu%(+RP" variabletype="">ledenAantal</field>
+    <value name="VALUE">
+      <block type="math_number" id="?/+^;w]Otw!FZ+t%}n,*">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="1R-4v$8DkPHgbVZa@Vk%">
+        <field name="VAR" id="}YY+jRc*TZSQ)j92}W=k" variabletype="">totaalLidgeld</field>
+        <value name="VALUE">
+          <block type="math_number" id="E4Uzptv{hR#-*SJi=*$*">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <next>
+          <block type="controls_dowhileUntil" id="dz.cCReW!8O{}!2J`@wp">
+            <field name="MODE">WHILE</field>
+            <statement name="DO">
+              <block type="variables_set" id="z^;CGFA!9G[V8W3tzwEk">
+                <field name="VAR" id="ow,F7gvU]W:y:l|q;5Vp" variabletype="">lidNaam</field>
+                <value name="VALUE">
+                  <block type="declare_string" id="O2Ka{bF^yq=*}ll:0Z@~">
+                    <value name="STRING_INPUT">
+                      <block type="text_prompt_ext" id="A*)7Kuh(oqf1ct?3=5w`">
+                        <mutation type="TEXT"></mutation>
+                        <field name="TYPE">TEXT</field>
+                        <value name="TEXT">
+                          <block type="text" id="NMduplX$1GE?{mXV;apf">
+                            <field name="TEXT">Geef je naam in.</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="controls_if" id="$[VML+O%-^/_.QA-+D6{">
+                    <value name="IF0">
+                      <block type="logic_operation" id="+@_b^jESBzS+iQQ0V%OP">
+                        <field name="OP">AND</field>
+                        <value name="A">
+                          <block type="logic_compare" id="keev;2+3N=ucI{Y5pthB">
+                            <field name="OP">NEQ</field>
+                            <value name="A">
+                              <block type="variables_get" id="GTN7sH}ClshtPHp5uS5e">
+                                <field name="VAR" id="ow,F7gvU]W:y:l|q;5Vp" variabletype="">lidNaam</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="text" id="PIKbjF-@5ak6PBbU1CKe">
+                                <field name="TEXT">stop</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="logic_compare" id="Rwj;MlfUld;b9xv(f|@*">
+                            <field name="OP">NEQ</field>
+                            <value name="A">
+                              <block type="variables_get" id="etQ:|3]2M6M.Yz:Nr-ch">
+                                <field name="VAR" id="ow,F7gvU]W:y:l|q;5Vp" variabletype="">lidNaam</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="text" id="]:.pQ2JS(YKWsztk_=hl">
+                                <field name="TEXT">STOP</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="variables_set" id="e7q*);7!)y@q,G4w,9}!">
+                        <field name="VAR" id="lQ.Lv_?8bMTkQLCh0|BB" variabletype="">leeftijd</field>
+                        <value name="VALUE">
+                          <block type="declare_integer" id="8iYkhj]Q-B8HXG-T*}/P">
+                            <value name="INTEGER_INPUT">
+                              <block type="text_prompt_ext" id="i|[nFTwJy)sq(CH?PJLp">
+                                <mutation type="NUMBER"></mutation>
+                                <field name="TYPE">NUMBER</field>
+                                <value name="TEXT">
+                                  <block type="text" id="0,#(Zfl:Kwc5fblxOGTr">
+                                    <field name="TEXT">Geef je leeftijd in.</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="variables_set" id="R=Y-#wgQ#g@%3`rF5Pk5">
+                            <field name="VAR" id="FSqZnO.eyp?fe.rG799w" variabletype="">jaarInkomen</field>
+                            <value name="VALUE">
+                              <block type="declare_real" id="[k=..F1Kx/rH$S1i#j0)">
+                                <value name="REAL_INPUT">
+                                  <block type="text_prompt_ext" id="VA3mT9f-4bH$yr*GTmJ`">
+                                    <mutation type="NUMBER"></mutation>
+                                    <field name="TYPE">NUMBER</field>
+                                    <value name="TEXT">
+                                      <block type="text" id="EnS]g1-H?*5uIDpgMVjv">
+                                        <field name="TEXT">Geef je jaarinkomen in.</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="variables_set" id="y=ha.Mh(fnzGKRz_;yNt">
+                                <field name="VAR" id="cbyL0(7,Jk2N~|-tRc}[" variabletype="">kinderenTenLaste</field>
+                                <value name="VALUE">
+                                  <block type="declare_integer" id="6%mJ`AylIe+i[RTjH/rG">
+                                    <value name="INTEGER_INPUT">
+                                      <block type="text_prompt_ext" id="dx;u~{pKc.-4-zCaS=A9">
+                                        <mutation type="NUMBER"></mutation>
+                                        <field name="TYPE">NUMBER</field>
+                                        <value name="TEXT">
+                                          <block type="text" id=";-)a58Nmxd:55?4%MpC?">
+                                            <field name="TEXT">Aantal kinderen ten laste?</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="variables_set" id="2}C:R{e#^_zG+hA@6}s?">
+                                    <field name="VAR" id="@}?eD_G;1.7+zYu%(+RP" variabletype="">ledenAantal</field>
+                                    <value name="VALUE">
+                                      <block type="math_arithmetic" id=",P~!wY/dlq$qEd^`ie_.">
+                                        <field name="OP">ADD</field>
+                                        <value name="A">
+                                          <block type="variables_get" id="]?!yu2mgClGoeEp=UsDW">
+                                            <field name="VAR" id="@}?eD_G;1.7+zYu%(+RP" variabletype="">ledenAantal</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block type="math_number" id="(|v=wQ]V.sZxn(ys#R(l">
+                                            <field name="NUM">1</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="variables_set" id="VuvlU}z*r9k1@raj`Pi-">
+                                        <field name="VAR" id="E8/3tpzUQ+`I2/#].AMM" variabletype="">lidgeld</field>
+                                        <value name="VALUE">
+                                          <block type="math_number" id="?c4qezrxU/_UidOq_.OI">
+                                            <field name="NUM">10</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="controls_if" id="w!20Q9}}3X%a%o08q/C5">
+                                            <value name="IF0">
+                                              <block type="logic_compare" id="apz#W{i{u8dXWuad^Bu,">
+                                                <field name="OP">GTE</field>
+                                                <value name="A">
+                                                  <block type="variables_get" id="wi;Afl#NVW~@U!3?oQlU">
+                                                    <field name="VAR" id="lQ.Lv_?8bMTkQLCh0|BB" variabletype="">leeftijd</field>
+                                                  </block>
+                                                </value>
+                                                <value name="B">
+                                                  <block type="math_number" id="(2oPr/No~-]ATM6mUga|">
+                                                    <field name="NUM">50</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <statement name="DO0">
+                                              <block type="variables_set" id="-|m1^A3sq-`vq?Au+55(">
+                                                <field name="VAR" id="E8/3tpzUQ+`I2/#].AMM" variabletype="">lidgeld</field>
+                                                <value name="VALUE">
+                                                  <block type="math_arithmetic" id="zSVN##`99#T9?;KG|jUD">
+                                                    <field name="OP">MINUS</field>
+                                                    <value name="A">
+                                                      <block type="variables_get" id="3V02hc{Y$Hzdn|eHZ1{p">
+                                                        <field name="VAR" id="E8/3tpzUQ+`I2/#].AMM" variabletype="">lidgeld</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="B">
+                                                      <block type="math_number" id="e%)0yU^FtxtP+;+IbbnI">
+                                                        <field name="NUM">2</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </statement>
+                                            <next>
+                                              <block type="controls_if" id="[=-xX-p7ghX3A9EGkURt">
+                                                <mutation else="1"></mutation>
+                                                <value name="IF0">
+                                                  <block type="logic_compare" id="C$6K}*0%x[VQ_oEzlzUI">
+                                                    <field name="OP">LT</field>
+                                                    <value name="A">
+                                                      <block type="variables_get" id="`~Y,cn*;@AwdL-1?pWa6">
+                                                        <field name="VAR" id="cbyL0(7,Jk2N~|-tRc}[" variabletype="">kinderenTenLaste</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="B">
+                                                      <block type="math_number" id="[)Rpr)*^8pHJG?UbJ=RJ">
+                                                        <field name="NUM">6</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <statement name="DO0">
+                                                  <block type="variables_set" id="f_EW4L%whbyr-}5O4%He">
+                                                    <field name="VAR" id="E8/3tpzUQ+`I2/#].AMM" variabletype="">lidgeld</field>
+                                                    <value name="VALUE">
+                                                      <block type="math_arithmetic" id="jG4FfMlry/TcjkS$`Bd;">
+                                                        <field name="OP">MINUS</field>
+                                                        <value name="A">
+                                                          <block type="variables_get" id="8OId_sWs]:V3$ov^y`/g">
+                                                            <field name="VAR" id="E8/3tpzUQ+`I2/#].AMM" variabletype="">lidgeld</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="B">
+                                                          <block type="variables_get" id="]|guG%tq9.vh{Ew%a$D|">
+                                                            <field name="VAR" id="cbyL0(7,Jk2N~|-tRc}[" variabletype="">kinderenTenLaste</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </statement>
+                                                <statement name="ELSE">
+                                                  <block type="variables_set" id="]^yF%@8Gx},3.hy31s?B">
+                                                    <field name="VAR" id="E8/3tpzUQ+`I2/#].AMM" variabletype="">lidgeld</field>
+                                                    <value name="VALUE">
+                                                      <block type="math_arithmetic" id="*Q5R$?Tqz/~MwI6D+A+G">
+                                                        <field name="OP">MINUS</field>
+                                                        <value name="A">
+                                                          <block type="variables_get" id="U%1{1x]fnS#1izrq=ng5">
+                                                            <field name="VAR" id="E8/3tpzUQ+`I2/#].AMM" variabletype="">lidgeld</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="B">
+                                                          <block type="math_number" id="6jM(^O]PMcG@[Hr%A}$-">
+                                                            <field name="NUM">5</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </statement>
+                                                <next>
+                                                  <block type="controls_if" id="y[wy{@j~[A#MzDN`**AB">
+                                                    <value name="IF0">
+                                                      <block type="logic_compare" id="2O*$;m^-*xjGEEQ68M#j">
+                                                        <field name="OP">LT</field>
+                                                        <value name="A">
+                                                          <block type="variables_get" id="=z/}$5Nd[l%;|?IwwXT7">
+                                                            <field name="VAR" id="FSqZnO.eyp?fe.rG799w" variabletype="">jaarInkomen</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="B">
+                                                          <block type="math_number" id=":t6fznCP!*%tj}%0:|d%">
+                                                            <field name="NUM">12500</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                    <statement name="DO0">
+                                                      <block type="variables_set" id="?~rL8+nJai6}myZqi~)O">
+                                                        <field name="VAR" id="E8/3tpzUQ+`I2/#].AMM" variabletype="">lidgeld</field>
+                                                        <value name="VALUE">
+                                                          <block type="math_arithmetic" id="V({2.Ho+$rKNMk[ae%Qd">
+                                                            <field name="OP">MINUS</field>
+                                                            <value name="A">
+                                                              <block type="variables_get" id="U2@*pj~g6Q||Ib9w{g=j">
+                                                                <field name="VAR" id="E8/3tpzUQ+`I2/#].AMM" variabletype="">lidgeld</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="B">
+                                                              <block type="math_number" id="!^t1j;`#-EyYF6`3zok1">
+                                                                <field name="NUM">2.5</field>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </statement>
+                                                    <next>
+                                                      <block type="controls_if" id="WEeU%MTRZc`5*,wyb-?$">
+                                                        <value name="IF0">
+                                                          <block type="logic_compare" id="X.y6nR)Fs#Ivf`9sX[!g">
+                                                            <field name="OP">LT</field>
+                                                            <value name="A">
+                                                              <block type="variables_get" id="+6#;dvY~8^GUu3`Orp3!">
+                                                                <field name="VAR" id="E8/3tpzUQ+`I2/#].AMM" variabletype="">lidgeld</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="B">
+                                                              <block type="math_number" id="|5fX5*HTO%ya%ib:xe,*">
+                                                                <field name="NUM">1.5</field>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </value>
+                                                        <statement name="DO0">
+                                                          <block type="variables_set" id="!M$JreG_[_Zk@H#8{CmK">
+                                                            <field name="VAR" id="E8/3tpzUQ+`I2/#].AMM" variabletype="">lidgeld</field>
+                                                            <value name="VALUE">
+                                                              <block type="math_number" id="6SfdjJc:KHLVHnjG_nYf">
+                                                                <field name="NUM">1.5</field>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </statement>
+                                                        <next>
+                                                          <block type="variables_set" id="9O{HQTU[GXo},A}I9gtQ">
+                                                            <field name="VAR" id="}YY+jRc*TZSQ)j92}W=k" variabletype="">totaalLidgeld</field>
+                                                            <value name="VALUE">
+                                                              <block type="math_arithmetic" id="{#31,$$3!?_]Rt4+hxDq">
+                                                                <field name="OP">ADD</field>
+                                                                <value name="A">
+                                                                  <block type="variables_get" id="{iX*Bg)}JT9;33C$n^^5">
+                                                                    <field name="VAR" id="}YY+jRc*TZSQ)j92}W=k" variabletype="">totaalLidgeld</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="B">
+                                                                  <block type="variables_get" id="]#_qbQ{*.``p;(Cjd2aK">
+                                                                    <field name="VAR" id="E8/3tpzUQ+`I2/#].AMM" variabletype="">lidgeld</field>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <value name="BOOL">
+              <block type="logic_operation" id="c$YWTYeCeM*4bq=2-aH(">
+                <field name="OP">AND</field>
+                <value name="A">
+                  <block type="logic_compare" id="]U=l@AGdS9a#G]oso{3:">
+                    <field name="OP">NEQ</field>
+                    <value name="A">
+                      <block type="variables_get" id="5o|O^XB3n_:!o$,/*JCr">
+                        <field name="VAR" id="ow,F7gvU]W:y:l|q;5Vp" variabletype="">lidNaam</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="text" id="t3ba65|$#?1CK46Es5t(">
+                        <field name="TEXT">stop</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="logic_compare" id="D,7R]:JY(#IPg`_L?pY,">
+                    <field name="OP">NEQ</field>
+                    <value name="A">
+                      <block type="variables_get" id="m/Y@Qu%;DE{#QVAWKzh1">
+                        <field name="VAR" id="ow,F7gvU]W:y:l|q;5Vp" variabletype="">lidNaam</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="text" id="O^V[vO*(UyIa9b+UCfy)">
+                        <field name="TEXT">STOP</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="text_print" id="P|SoSR/Sw*IL?[Az#[mp">
+                <value name="TEXT">
+                  <block type="text_join" id="x;y[*vJ,4DPg`Mg*.qJF">
+                    <mutation items="2"></mutation>
+                    <value name="ADD0">
+                      <block type="text" id="95Yay,8*~Wy(79xdme8u">
+                        <field name="TEXT">Aantal leden: </field>
+                      </block>
+                    </value>
+                    <value name="ADD1">
+                      <block type="variables_get" id="dtZ*WR^bZ=ulQPA1j)Pm">
+                        <field name="VAR" id="@}?eD_G;1.7+zYu%(+RP" variabletype="">ledenAantal</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="text_print" id="uG.1K]eXCdbkKy(XwQ[C">
+                    <value name="TEXT">
+                      <block type="text_join" id="Nt5Z4Enf}]kz,y;x-e#*">
+                        <mutation items="2"></mutation>
+                        <value name="ADD0">
+                          <block type="text" id="iIvg+D_=Lq]]SL%w}N%U">
+                            <field name="TEXT">Totaal lidgeld: </field>
+                          </block>
+                        </value>
+                        <value name="ADD1">
+                          <block type="variables_get" id="dwX.mvp7oGtK=VeVD:Ri">
+                            <field name="VAR" id="}YY+jRc*TZSQ)j92}W=k" variabletype="">totaalLidgeld</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="text_print" id="rP]KHk^:D%;}T=%_=~;s">
+                        <value name="TEXT">
+                          <block type="text_join" id="CD=@E,7EH-Z{m%;G!PE.">
+                            <mutation items="2"></mutation>
+                            <value name="ADD0">
+                              <block type="text" id="95)m+A!-q-dd;mSLhFfN">
+                                <field name="TEXT">Gemiddeld lidgeld: </field>
+                              </block>
+                            </value>
+                            <value name="ADD1">
+                              <block type="math_arithmetic" id=",0wEabQ06ad+rZZB#B1d">
+                                <field name="OP">DIVIDE</field>
+                                <value name="A">
+                                  <block type="variables_get" id="_]Or5)|G,4yQ5SPjbX[O">
+                                    <field name="VAR" id="}YY+jRc*TZSQ)j92}W=k" variabletype="">totaalLidgeld</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="variables_get" id="(1zxp;zQQq~@).PCrEA3">
+                                    <field name="VAR" id="@}?eD_G;1.7+zYu%(+RP" variabletype="">ledenAantal</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

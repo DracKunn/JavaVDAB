@@ -1,0 +1,177 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="*p{%p%B-/bNj#44Un0oy">getal1</variable>
+    <variable type="" id="O(k/!T1pNrmysfqAjd2D">getal2</variable>
+    <variable type="" id="YsW[43/@Dqt4]d$NxD4u">getal3</variable>
+    <variable type="" id="e`{G?}{(A+;b6/Om9|74">item</variable>
+    <variable type="" id="]@92cy3,c=keHj}4PD]k">max</variable>
+  </variables>
+  <block type="variables_set" id="-ynHZgAbNG:1L+pFjJ~J" x="28" y="25">
+    <field name="VAR" id="]@92cy3,c=keHj}4PD]k" variabletype="">max</field>
+    <value name="VALUE">
+      <block type="declare_integer" id="v^PU0JqxS7iC7f`ak6sd">
+        <value name="INTEGER_INPUT">
+          <block type="text_prompt_ext" id="+4I*qeExAlKiQ!8wYxnq">
+            <mutation type="NUMBER"></mutation>
+            <field name="TYPE">NUMBER</field>
+            <value name="TEXT">
+              <block type="text" id="Q3T;Of+p]c5z}/UwU~!c">
+                <field name="TEXT">geef maximum in</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="bh0C%koX=5#MP#-wYVMe">
+        <field name="VAR" id="*p{%p%B-/bNj#44Un0oy" variabletype="">getal1</field>
+        <value name="VALUE">
+          <block type="declare_integer" id="^+b4rJey:(tP$0kkc4{@">
+            <value name="INTEGER_INPUT">
+              <block type="math_number" id="/T!2z1X@gRhA^.CE4E/*">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="=]~o}FSN7`E3YI2`La`[">
+            <field name="VAR" id="O(k/!T1pNrmysfqAjd2D" variabletype="">getal2</field>
+            <value name="VALUE">
+              <block type="declare_integer" id="I]0|r@A$20NEiXi*k?5y">
+                <value name="INTEGER_INPUT">
+                  <block type="math_number" id="a~t,q)+eQ^7Z@]#-NPC1">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" id="wvk)JGax[Mt10HLh=Wlp">
+                <field name="VAR" id="YsW[43/@Dqt4]d$NxD4u" variabletype="">getal3</field>
+                <value name="VALUE">
+                  <block type="declare_integer" id="YF/6({YZ_]@2Qu?`H60S">
+                    <value name="INTEGER_INPUT">
+                      <block type="math_arithmetic" id="3z9cS]vMLYa1WZ40{+yH">
+                        <field name="OP">ADD</field>
+                        <value name="A">
+                          <block type="variables_get" id="h#AI~FNg,skcKl9QqPD`">
+                            <field name="VAR" id="*p{%p%B-/bNj#44Un0oy" variabletype="">getal1</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="variables_get" id="GgAWJ@bg$#_I}if@+HJ!">
+                            <field name="VAR" id="O(k/!T1pNrmysfqAjd2D" variabletype="">getal2</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="text_print_sameline" id="6F|u?4v})q5-zBFPW;^2">
+                    <value name="TEXT">
+                      <block type="text_join" id="~BDTRG]l#.Ui8jyse5u/">
+                        <mutation items="2"></mutation>
+                        <value name="ADD0">
+                          <block type="variables_get" id="Ex67Vhv:a`c6eKw[R-:z">
+                            <field name="VAR" id="*p{%p%B-/bNj#44Un0oy" variabletype="">getal1</field>
+                          </block>
+                        </value>
+                        <value name="ADD1">
+                          <block type="text" id="$@+MUm_G%0$VZFn6QUE_">
+                            <field name="TEXT">, </field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="controls_dowhileUntil" id="s_Dts*(lb4Z_m7p][.?%">
+                        <field name="MODE">UNTIL</field>
+                        <statement name="DO">
+                          <block type="text_print_sameline" id="n_y=kE[Iw.Y:R9y,-@8L">
+                            <value name="TEXT">
+                              <block type="text_join" id="SlCok9}rQ/yPg~xdEF:s">
+                                <mutation items="2"></mutation>
+                                <value name="ADD0">
+                                  <block type="variables_get" id="~Il0peIlf@S:(uWsPz#*">
+                                    <field name="VAR" id="O(k/!T1pNrmysfqAjd2D" variabletype="">getal2</field>
+                                  </block>
+                                </value>
+                                <value name="ADD1">
+                                  <block type="text" id="~n-F.#?61|X.~m`)@X8T">
+                                    <field name="TEXT">, </field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="variables_set" id="hp8[I-h}=K6|Ot-7bSu2">
+                                <field name="VAR" id="*p{%p%B-/bNj#44Un0oy" variabletype="">getal1</field>
+                                <value name="VALUE">
+                                  <block type="variables_get" id="3@tER`1Ty1eK]IJ=ZuK0">
+                                    <field name="VAR" id="O(k/!T1pNrmysfqAjd2D" variabletype="">getal2</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="variables_set" id="XH|^@BHWetW^-=bqmJWZ">
+                                    <field name="VAR" id="O(k/!T1pNrmysfqAjd2D" variabletype="">getal2</field>
+                                    <value name="VALUE">
+                                      <block type="variables_get" id="[!OSh:KtCDPwO`N^n9Fq">
+                                        <field name="VAR" id="YsW[43/@Dqt4]d$NxD4u" variabletype="">getal3</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="variables_set" id="dKu9RFVj((+Nuz1Du?fw">
+                                        <field name="VAR" id="YsW[43/@Dqt4]d$NxD4u" variabletype="">getal3</field>
+                                        <value name="VALUE">
+                                          <block type="math_arithmetic" id="oH$[*_.Nn=OzybQ#Dx#?">
+                                            <field name="OP">ADD</field>
+                                            <value name="A">
+                                              <block type="variables_get" id=")1)^PwnuFtWke,s*f6ZZ">
+                                                <field name="VAR" id="*p{%p%B-/bNj#44Un0oy" variabletype="">getal1</field>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <block type="variables_get" id="?A13iQZQ/T)D*e(x]H0m">
+                                                <field name="VAR" id="O(k/!T1pNrmysfqAjd2D" variabletype="">getal2</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                        <value name="BOOL">
+                          <block type="logic_compare" id="KgN-x/4Zb?AJ#QayJlw0">
+                            <field name="OP">GTE</field>
+                            <value name="A">
+                              <block type="variables_get" id="Wg1=EIjm11,qY:]$6%]f">
+                                <field name="VAR" id="O(k/!T1pNrmysfqAjd2D" variabletype="">getal2</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="variables_get" id="!+F]q(-jRGya~5yQqg.-">
+                                <field name="VAR" id="]@92cy3,c=keHj}4PD]k" variabletype="">max</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

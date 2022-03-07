@@ -1,0 +1,233 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="Ik/Y0g4ns-xs)Aw|@P#u">getal</variable>
+    <variable type="" id="W}_JzRwAYY4$a[[m^J4(">totaal</variable>
+    <variable type="" id="La]])7:t,1@1XhvT#R69">operator</variable>
+  </variables>
+  <block type="variables_set" id="d9Lqv$sk31%v5B|Dza*0" x="94" y="-69">
+    <field name="VAR" id="W}_JzRwAYY4$a[[m^J4(" variabletype="">totaal</field>
+    <value name="VALUE">
+      <block type="declare_integer" id="MueYwo~VpN-0Qjc-.e-v">
+        <value name="INTEGER_INPUT">
+          <block type="text_prompt_ext" id="T5AxDpv#gxaykh=5Yt]f">
+            <mutation type="NUMBER"></mutation>
+            <field name="TYPE">NUMBER</field>
+            <value name="TEXT">
+              <block type="text" id="qss%=Y!)aQz=N][ZEBln">
+                <field name="TEXT">Geef een getal in:</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="controls_whileUntil" id="fP@_9@LW3:;LnB]D3KN3">
+        <field name="MODE">WHILE</field>
+        <value name="BOOL">
+          <block type="logic_compare" id="h*!F!!mpwsG,UP/xWfle">
+            <field name="OP">NEQ</field>
+            <value name="A">
+              <block type="variables_get" id="1dYk7Jw/7r;1B5LCUu|o">
+                <field name="VAR" id="La]])7:t,1@1XhvT#R69" variabletype="">operator</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="yLh)9d4;[khmN~t[57kq">
+                <field name="TEXT">=</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="variables_set" id="+y,pcY;qPFy,MGs=qt[2">
+            <field name="VAR" id="La]])7:t,1@1XhvT#R69" variabletype="">operator</field>
+            <value name="VALUE">
+              <block type="declare_string" id="m~3hu[:be]+15%1I6COX">
+                <value name="STRING_INPUT">
+                  <block type="text_prompt_ext" id="{:3;xHC857qt6UMoFHhO">
+                    <mutation type="TEXT"></mutation>
+                    <field name="TYPE">TEXT</field>
+                    <value name="TEXT">
+                      <block type="text" id="xqdrYq+N5QyYL:#I0nQE">
+                        <field name="TEXT">Geef een operator in, kies uit: + - * / of =</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="controls_if" id=",5heN,#hM0C)i4Frd:h0">
+                <value name="IF0">
+                  <block type="logic_compare" id="WuUX4c6ow9A2[By1nP|-">
+                    <field name="OP">NEQ</field>
+                    <value name="A">
+                      <block type="variables_get" id="=i1]elFHJN{3GMQj~z}^">
+                        <field name="VAR" id="La]])7:t,1@1XhvT#R69" variabletype="">operator</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="text" id="|Xd+HUjxPTT]iXA9=VQ-">
+                        <field name="TEXT">=</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="variables_set" id="7GDHF@YOp|UgJ(:4#9gP">
+                    <field name="VAR" id="Ik/Y0g4ns-xs)Aw|@P#u" variabletype="">getal</field>
+                    <value name="VALUE">
+                      <block type="declare_integer" id="lgF/cph|D`@Vg,P5n^9|">
+                        <value name="INTEGER_INPUT">
+                          <block type="text_prompt_ext" id="[?lLq!oL^%f%e#4XYrVd">
+                            <mutation type="NUMBER"></mutation>
+                            <field name="TYPE">NUMBER</field>
+                            <value name="TEXT">
+                              <block type="text" id="he)$@p_yILnY~fYCjFQg">
+                                <field name="TEXT">Geef een getal in:</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="switch_case" id="cfr+}.jale4cR$?OaR6E">
+                        <mutation order="0,0,0,0"></mutation>
+                        <value name="CONDITION">
+                          <block type="variables_get" id="U/i.8jR:=BNT5f+c-2+B">
+                            <field name="VAR" id="La]])7:t,1@1XhvT#R69" variabletype="">operator</field>
+                          </block>
+                        </value>
+                        <value name="CASECONDITION0">
+                          <block type="text" id="brY$t%=S(B*Wj]RmpygD">
+                            <field name="TEXT">+</field>
+                          </block>
+                        </value>
+                        <statement name="CASE0">
+                          <block type="variables_set" id="YO`fe.?NLrzkX_bTLNm)">
+                            <field name="VAR" id="W}_JzRwAYY4$a[[m^J4(" variabletype="">totaal</field>
+                            <value name="VALUE">
+                              <block type="math_arithmetic" id="@ssN+tx-?_^H*-(-Vg+l">
+                                <field name="OP">ADD</field>
+                                <value name="A">
+                                  <block type="variables_get" id="t4N|VE7i}2xB4CI[8d=5">
+                                    <field name="VAR" id="W}_JzRwAYY4$a[[m^J4(" variabletype="">totaal</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="variables_get" id="-kWENEz:pf(od,U6$!aY">
+                                    <field name="VAR" id="Ik/Y0g4ns-xs)Aw|@P#u" variabletype="">getal</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                        <value name="CASECONDITION1">
+                          <block type="text" id="(rf:+zIY+H42W}OhMs)A">
+                            <field name="TEXT">-</field>
+                          </block>
+                        </value>
+                        <statement name="CASE1">
+                          <block type="variables_set" id="}7C*9l+s.]HaH^Pc))bG">
+                            <field name="VAR" id="W}_JzRwAYY4$a[[m^J4(" variabletype="">totaal</field>
+                            <value name="VALUE">
+                              <block type="math_arithmetic" id=":VV@u%Nk-v`.T-+G?|0D">
+                                <field name="OP">MINUS</field>
+                                <value name="A">
+                                  <block type="variables_get" id="Ug5T~(1i(hDB.,Sxr$WV">
+                                    <field name="VAR" id="W}_JzRwAYY4$a[[m^J4(" variabletype="">totaal</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="variables_get" id="u~,%Ctplq{8J{sL;JYU-">
+                                    <field name="VAR" id="Ik/Y0g4ns-xs)Aw|@P#u" variabletype="">getal</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                        <value name="CASECONDITION2">
+                          <block type="text" id="wZNS)U}VGr`K/Y//M-21">
+                            <field name="TEXT">*</field>
+                          </block>
+                        </value>
+                        <statement name="CASE2">
+                          <block type="variables_set" id="TrA+Eba#dTo1{W$#q}Ay">
+                            <field name="VAR" id="W}_JzRwAYY4$a[[m^J4(" variabletype="">totaal</field>
+                            <value name="VALUE">
+                              <block type="math_arithmetic" id="g/bhV.=:`%-IdH(O~]i8">
+                                <field name="OP">MULTIPLY</field>
+                                <value name="A">
+                                  <block type="variables_get" id="PH_!vht/F33IiLYf:J4I">
+                                    <field name="VAR" id="W}_JzRwAYY4$a[[m^J4(" variabletype="">totaal</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="variables_get" id="0{-[3!EFdECokyniX)tP">
+                                    <field name="VAR" id="Ik/Y0g4ns-xs)Aw|@P#u" variabletype="">getal</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                        <value name="CASECONDITION3">
+                          <block type="text" id="BJ8+}FG.oi#rq~urfLR)">
+                            <field name="TEXT">/</field>
+                          </block>
+                        </value>
+                        <statement name="CASE3">
+                          <block type="variables_set" id="G6A)h7Q($-2qUN8^GS@e">
+                            <field name="VAR" id="W}_JzRwAYY4$a[[m^J4(" variabletype="">totaal</field>
+                            <value name="VALUE">
+                              <block type="math_arithmetic" id="vSd`V,lOqw`t6_?@r~^o">
+                                <field name="OP">DIVIDE</field>
+                                <value name="A">
+                                  <block type="variables_get" id="/5|NhZ~)]Red}saXoDlR">
+                                    <field name="VAR" id="W}_JzRwAYY4$a[[m^J4(" variabletype="">totaal</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="variables_get" id="6?eOg{i^KUMLt}%OD?sE">
+                                    <field name="VAR" id="Ik/Y0g4ns-xs)Aw|@P#u" variabletype="">getal</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="text_print" id="L_?}0}*5+Cfj{(R*SVj4">
+            <value name="TEXT">
+              <block type="text_join" id="CsjQ(~5s.RVQ/OlMRh+2">
+                <mutation items="2"></mutation>
+                <value name="ADD0">
+                  <block type="text" id="[+UCOC@#SpUZN@%7Rp{8">
+                    <field name="TEXT">Resultaat: </field>
+                  </block>
+                </value>
+                <value name="ADD1">
+                  <block type="variables_get" id="c~l!u~nj5h|T-m16.V@I">
+                    <field name="VAR" id="W}_JzRwAYY4$a[[m^J4(" variabletype="">totaal</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
