@@ -1,0 +1,77 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="%(M}tT)C^$%jCn_B^NMS">leeftijd</variable>
+  </variables>
+  <block type="variables_set" id="+yh-O%%Dh-E/NV;UV.?8" x="20" y="67">
+    <field name="VAR" id="%(M}tT)C^$%jCn_B^NMS" variabletype="">leeftijd</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="eQ4$t*N^_j(Qe4O{#!ce">
+        <mutation type="NUMBER"></mutation>
+        <field name="TYPE">NUMBER</field>
+        <value name="TEXT">
+          <block type="text" id="0A.f~#`el3tYWD3-9n-.">
+            <field name="TEXT">Leeftijd:</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="controls_if" id="VEpg/@#xhK3cS,;i4+{O">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_operation" id="O68cs]fWh#]fUrDPb-*^">
+            <field name="OP">OR</field>
+            <value name="A">
+              <block type="logic_compare" id="+tqp8`J]L#%R/eH[r*p0">
+                <field name="OP">LT</field>
+                <value name="A">
+                  <block type="variables_get" id="(ivx|KM7_.J77=ZpJ{r/">
+                    <field name="VAR" id="%(M}tT)C^$%jCn_B^NMS" variabletype="">leeftijd</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="^8_w~2x{xH/~hLdN=2$t">
+                    <field name="NUM">7</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <block type="logic_compare" id="F6{xER(tE:%`|,Vzgby-">
+                <field name="OP">GT</field>
+                <value name="A">
+                  <block type="variables_get" id="NKn}P1Wi)%9hC/U8+@v:">
+                    <field name="VAR" id="%(M}tT)C^$%jCn_B^NMS" variabletype="">leeftijd</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="+nG3?Wmh1CH:SW$y?w!q">
+                    <field name="NUM">80</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="text_print" id="qX~LP,XxHrmE5aMO3DV*">
+            <value name="TEXT">
+              <block type="text" id="-wx}$x:u$1|}r5,IT=2C">
+                <field name="TEXT">Prijs: 5</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="text_print" id=":}XH~LD:/;u)BD?V/@gE">
+            <value name="TEXT">
+              <block type="text" id="[,M=vKMRcETWV4JSL1Qu">
+                <field name="TEXT">Prijs: 10</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

@@ -1,0 +1,73 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="lQ,cd)Awn-p2!zAf`2nG">hoogte</variable>
+    <variable type="" id="TpR[$Fx?$o!!98)XV,0R">hoogteteller</variable>
+    <variable type="" id="kWj@y5b#(G4bQL%Sc82b">breedteTeller</variable>
+  </variables>
+  <block type="variables_set" id="SCqQSs@BZ?;/pmmM32z`" x="30" y="24">
+    <field name="VAR" id="lQ,cd)Awn-p2!zAf`2nG" variabletype="">hoogte</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="oz9jL=l3uQ)+g(KnbnGK">
+        <mutation type="NUMBER"></mutation>
+        <field name="TYPE">NUMBER</field>
+        <value name="TEXT">
+          <block type="text" id="YxZ=wj.7b1x%cv|~$.kb">
+            <field name="TEXT">Hoogte driehoek:</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="controls_for" id="w;eKAwS1,EUsEmf4Xx3Y">
+        <field name="VAR" id="TpR[$Fx?$o!!98)XV,0R" variabletype="">hoogteteller</field>
+        <value name="FROM">
+          <block type="math_number" id="hgVW)O[yn0N;v9l6qjg~">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <value name="TO">
+          <block type="variables_get" id="Ym[l:!E`xPD~^n-TYx}1">
+            <field name="VAR" id="lQ,cd)Awn-p2!zAf`2nG" variabletype="">hoogte</field>
+          </block>
+        </value>
+        <value name="BY">
+          <block type="math_number" id="4d18x*:1fHbB[LCV_oRw">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="controls_for" id="*yDDcDrgcXLD9%9svT]I">
+            <field name="VAR" id="kWj@y5b#(G4bQL%Sc82b" variabletype="">breedteTeller</field>
+            <value name="FROM">
+              <block type="math_number" id="5H$SU/P;bNKjMOG^SnJA">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+            <value name="TO">
+              <block type="variables_get" id="Vu[{QX*25z[z(IDM%)lj">
+                <field name="VAR" id="TpR[$Fx?$o!!98)XV,0R" variabletype="">hoogteteller</field>
+              </block>
+            </value>
+            <value name="BY">
+              <block type="math_number" id="1`uumBa$l~j^qk(KAbo~">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="text_print_sameline" id="o4HMWN}4I*?Iv,tjq39X">
+                <value name="TEXT">
+                  <block type="text" id="(T4*|[xaZ|-5vBVp2WTh">
+                    <field name="TEXT">*</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <next>
+              <block type="text_print" id="]Pda2k:s*uN8-_uvEA3b"></block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

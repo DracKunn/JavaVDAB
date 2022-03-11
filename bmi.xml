@@ -1,0 +1,115 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="`NYlcvWJX[iYjk!5naOZ">gewicht</variable>
+    <variable type="" id="_FQWTpERv$;PriIyYn97">lengte</variable>
+    <variable type="" id="16,@bio$HuE:hy=JpRzx">bmi</variable>
+  </variables>
+  <block type="variables_set" id="Ah{2FJ})}KA!8$fUaQRN" x="18" y="45">
+    <field name="VAR" id="`NYlcvWJX[iYjk!5naOZ" variabletype="">gewicht</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="JeXn07)pV%C(-b{eFCh.">
+        <mutation type="NUMBER"></mutation>
+        <field name="TYPE">NUMBER</field>
+        <value name="TEXT">
+          <block type="text" id="^-60axAK^S{#FC1J16dq">
+            <field name="TEXT">Gewicht in kilogram: </field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="}kub5GB1b%@,EQ5gX]iq">
+        <field name="VAR" id="_FQWTpERv$;PriIyYn97" variabletype="">lengte</field>
+        <value name="VALUE">
+          <block type="text_prompt_ext" id="ePBL6RUcTT*{T(*k4?ZK">
+            <mutation type="NUMBER"></mutation>
+            <field name="TYPE">NUMBER</field>
+            <value name="TEXT">
+              <block type="text" id="(,2pQED*?dVRC-YY%a,u">
+                <field name="TEXT">Lengte in meter: </field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="5PuO!f|^zIVew|#Oj+u2">
+            <field name="VAR" id="16,@bio$HuE:hy=JpRzx" variabletype="">bmi</field>
+            <value name="VALUE">
+              <block type="math_arithmetic" id="MeYJ(qn0V?zsny{(1o9c">
+                <field name="OP">DIVIDE</field>
+                <value name="A">
+                  <block type="variables_get" id="{t6EqO[g,1ySlKw]{0q:">
+                    <field name="VAR" id="`NYlcvWJX[iYjk!5naOZ" variabletype="">gewicht</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_arithmetic" id="XBJvr0$$*yjSZpF;~f/%">
+                    <field name="OP">POWER</field>
+                    <value name="A">
+                      <block type="variables_get" id="h]YC)XGIc3(rTk8sX;m/">
+                        <field name="VAR" id="_FQWTpERv$;PriIyYn97" variabletype="">lengte</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="Le[$!*]9hXb69sr5/3sI">
+                        <field name="NUM">2</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="controls_if" id="2m+Rn]KZ#WtoRXcF1x{5">
+                <value name="IF0">
+                  <block type="logic_operation" id="@C$cL|J`?6KZjM%O[Wv+">
+                    <field name="OP">AND</field>
+                    <value name="A">
+                      <block type="logic_compare" id="i%_m1Dqp[Zl+_~nH#?@}">
+                        <field name="OP">GTE</field>
+                        <value name="A">
+                          <block type="variables_get" id="m/t=QAuG.yTx}g3;5:4C">
+                            <field name="VAR" id="16,@bio$HuE:hy=JpRzx" variabletype="">bmi</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="s7h3r;eD8[5*k=KbyiuQ">
+                            <field name="NUM">18.5</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="logic_compare" id="4B|YcbMX1vAzPW]3[{fw">
+                        <field name="OP">LTE</field>
+                        <value name="A">
+                          <block type="variables_get" id="Y`mbrpWExnMw[VRp[)G$">
+                            <field name="VAR" id="16,@bio$HuE:hy=JpRzx" variabletype="">bmi</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="`%i@s*ZEm`R1Q3GSLb|v">
+                            <field name="NUM">25</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="text_print" id="}fd|mE?@apb16b2D$,IJ">
+                    <value name="TEXT">
+                      <block type="text" id="S3b$0OpaT7}pWBZ_hMgc">
+                        <field name="TEXT">OK</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

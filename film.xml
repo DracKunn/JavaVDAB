@@ -1,0 +1,62 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="fD#~78LGAOmKA9#*cLBj">titel</variable>
+    <variable type="" id="|:z1acb^]ZFPR;IseQOo">jaar</variable>
+    <variable type="" id=")3?zJ_Rqu*z22bRfKm!o">ookVoorKinderen</variable>
+  </variables>
+  <block type="variables_set" id="(MmhpBHnbI?erR*y11~y" x="24" y="35">
+    <field name="VAR" id="fD#~78LGAOmKA9#*cLBj" variabletype="">titel</field>
+    <value name="VALUE">
+      <block type="text" id=";Vj]pb=K=aa*WPX.J7mC">
+        <field name="TEXT">Frozen</field>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="cE{{^`nEDeTQxd$7DvB@">
+        <field name="VAR" id="|:z1acb^]ZFPR;IseQOo" variabletype="">jaar</field>
+        <value name="VALUE">
+          <block type="math_number" id="7Tlb8sWWbKo8I/MSG{=p">
+            <field name="NUM">2013</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="wWbwM)Fx,|;=wZEo/;@(">
+            <field name="VAR" id=")3?zJ_Rqu*z22bRfKm!o" variabletype="">ookVoorKinderen</field>
+            <value name="VALUE">
+              <block type="logic_boolean" id=".,bkFRLl-1R1UrBIh8Uf">
+                <field name="BOOL">TRUE</field>
+              </block>
+            </value>
+            <next>
+              <block type="text_print" id=".X`~N?O%$#h3N8|{XQZ}">
+                <value name="TEXT">
+                  <block type="variables_get" id="DCQmxwnwgS+huGzAxvtO">
+                    <field name="VAR" id="fD#~78LGAOmKA9#*cLBj" variabletype="">titel</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="text_print" id="[)4fA3,WFmZg7?IH{4L?">
+                    <value name="TEXT">
+                      <block type="variables_get" id="TMBmKMQQE0$!wG(M9c{l">
+                        <field name="VAR" id="|:z1acb^]ZFPR;IseQOo" variabletype="">jaar</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="text_print" id="Z`E0XA8@Kn_^4j:MIA=#">
+                        <value name="TEXT">
+                          <block type="variables_get" id="}6,O9s/4@2?5oyFgZmfB">
+                            <field name="VAR" id=")3?zJ_Rqu*z22bRfKm!o" variabletype="">ookVoorKinderen</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

@@ -1,0 +1,161 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="?{BPaoRAu#GLY`SLDsK7">teRadenGetal</variable>
+    <variable type="" id="`TNa@G!.^B+]_mX%N1O:">getal</variable>
+    <variable type="" id="tJK!%5C)V*2n`r1JxN2_">teller</variable>
+  </variables>
+  <block type="variables_set" id="GeGm%${BjUcO2Ke*)t/6" x="16" y="98">
+    <field name="VAR" id="?{BPaoRAu#GLY`SLDsK7" variabletype="">teRadenGetal</field>
+    <value name="VALUE">
+      <block type="math_random_int" id="kkdzSv2Z:4uRU8DAeg~#">
+        <value name="FROM">
+          <block type="math_number" id="@QMEM{uaES/`/#z=8^UR">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <value name="TO">
+          <block type="math_number" id="fe)tNaCk)NDo?Z.IFRwF">
+            <field name="NUM">10</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="`ied=::kTZw~-Spa/X(/">
+        <field name="VAR" id="`TNa@G!.^B+]_mX%N1O:" variabletype="">getal</field>
+        <value name="VALUE">
+          <block type="text_prompt_ext" id="TdTvlqpa2nmU:8-oOP$Y">
+            <mutation type="NUMBER"></mutation>
+            <field name="TYPE">NUMBER</field>
+            <value name="TEXT">
+              <block type="text" id="s`cSx*6=%uw%I[e5U6dy">
+                <field name="TEXT">Raad een getal tussen 1 en 10.</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="SlLMn^Fs^#s_MU^zFskd">
+            <field name="VAR" id="tJK!%5C)V*2n`r1JxN2_" variabletype="">teller</field>
+            <value name="VALUE">
+              <block type="math_number" id=":RR32moP^_ceq!OEpo1Z">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+            <next>
+              <block type="controls_whileUntil" id="!wqA%gF;V(@r#2?suVdY">
+                <field name="MODE">WHILE</field>
+                <value name="BOOL">
+                  <block type="logic_compare" id=",z*fRk.EecKsaTO+1E,8">
+                    <field name="OP">NEQ</field>
+                    <value name="A">
+                      <block type="variables_get" id="]npuO(v0[vs,-W~50Y4g">
+                        <field name="VAR" id="`TNa@G!.^B+]_mX%N1O:" variabletype="">getal</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="variables_get" id="z}xuu-?M(N{vVd4!qZPB">
+                        <field name="VAR" id="?{BPaoRAu#GLY`SLDsK7" variabletype="">teRadenGetal</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO">
+                  <block type="math_change" id=",JU;I2Ls#Dnp=Yx(zATF">
+                    <field name="VAR" id="tJK!%5C)V*2n`r1JxN2_" variabletype="">teller</field>
+                    <value name="DELTA">
+                      <shadow type="math_number" id="5faE~CW-#1W,;Xj.n0q2">
+                        <field name="NUM">1</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="controls_if" id="@laLO:lk1{I8_xqUQ-Q!">
+                        <mutation else="1"></mutation>
+                        <value name="IF0">
+                          <block type="logic_compare" id="Po_|eOqF/tCfBkS+~8jd">
+                            <field name="OP">GT</field>
+                            <value name="A">
+                              <block type="variables_get" id="eip|tfWX`f`KRtvTWB;M">
+                                <field name="VAR" id="`TNa@G!.^B+]_mX%N1O:" variabletype="">getal</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="variables_get" id="{mbILH~^E-N7|HeQjN`{">
+                                <field name="VAR" id="?{BPaoRAu#GLY`SLDsK7" variabletype="">teRadenGetal</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="text_print" id=";UV6UzRC[](:gp^8`d92">
+                            <value name="TEXT">
+                              <block type="text" id="MoA9k#)X]p{bwhTVYeX]">
+                                <field name="TEXT">Lager.</field>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                        <statement name="ELSE">
+                          <block type="text_print" id="Yyrk^zlz4p3@%~E5BK,2">
+                            <value name="TEXT">
+                              <block type="text" id="|!5):*`YGt~h6$sY*DS[">
+                                <field name="TEXT">Hoger.</field>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="variables_set" id="^Ir8%-`XWC.T0`t-l^+;">
+                            <field name="VAR" id="`TNa@G!.^B+]_mX%N1O:" variabletype="">getal</field>
+                            <value name="VALUE">
+                              <block type="text_prompt_ext" id="KSfmqq4p:|jDuV;V(#VH">
+                                <mutation type="NUMBER"></mutation>
+                                <field name="TYPE">NUMBER</field>
+                                <value name="TEXT">
+                                  <block type="text" id="0S]`^c6S@~lS;h616Dh?">
+                                    <field name="TEXT">Raad een getal tussen 1 en 10.</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="text_print" id="]Ya0+e0IzS%0pgHs=%(E">
+                    <value name="TEXT">
+                      <block type="text" id="R51-186mY:ltPy^G[#=S">
+                        <field name="TEXT">Proficiat.</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="text_print_sameline" id="g}|N!8QG8CqoDZ3xwxF_">
+                        <value name="TEXT">
+                          <block type="variables_get" id="U)Vz+yaLU~u.eq,JdV^f">
+                            <field name="VAR" id="tJK!%5C)V*2n`r1JxN2_" variabletype="">teller</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="text_print" id="pd(-AX)rLrd=LYw^E?aW">
+                            <value name="TEXT">
+                              <block type="text" id="y^A7)vQ9ejwYV$sA6F`%">
+                                <field name="TEXT"> beurten.</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

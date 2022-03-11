@@ -1,0 +1,181 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="n_~?b|E|E]Do?G!TK=}x">beginkapitaal</variable>
+    <variable type="" id="#`%KT/E`$=e:}|m4zn*#">looptijd</variable>
+    <variable type="" id="#/GkvmHt=OXKn2VL]+x4">intrest</variable>
+    <variable type="" id="I*.nY5.}F1aC.-Z5k!hx">waarde</variable>
+    <variable type="" id="VZJ7N|iZ24j2in4-.D$;">factor</variable>
+    <variable type="" id="58mSX4tj^N1izTE8${xK">jaar</variable>
+  </variables>
+  <block type="variables_set" id="4`++9MB{^F~%_rO09utJ" x="12" y="28">
+    <field name="VAR" id="n_~?b|E|E]Do?G!TK=}x" variabletype="">beginkapitaal</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="4iRQeyzNnkoSZbmZ#u~r">
+        <mutation type="NUMBER"></mutation>
+        <field name="TYPE">NUMBER</field>
+        <value name="TEXT">
+          <block type="text" id="{k(yFi=s%^XXOt-r*$lP">
+            <field name="TEXT">Beginkapitaal:</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="YmgT1-}igBZ5GmPGfn`n">
+        <field name="VAR" id="#`%KT/E`$=e:}|m4zn*#" variabletype="">looptijd</field>
+        <value name="VALUE">
+          <block type="text_prompt_ext" id="S~9/D~7a:RC9c@2$(jWd">
+            <mutation type="NUMBER"></mutation>
+            <field name="TYPE">NUMBER</field>
+            <value name="TEXT">
+              <block type="text" id="rjnJnH+BwyDku)GE(Wep">
+                <field name="TEXT">Looptijd:</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="B^]d{1yzAI5[PKNi7]eR">
+            <field name="VAR" id="I*.nY5.}F1aC.-Z5k!hx" variabletype="">waarde</field>
+            <value name="VALUE">
+              <block type="variables_get" id="M;f+RHBE%7td?eMKj2%-">
+                <field name="VAR" id="n_~?b|E|E]Do?G!TK=}x" variabletype="">beginkapitaal</field>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" id="U{bbKsO|D+94rK3a6H+d">
+                <field name="VAR" id="#/GkvmHt=OXKn2VL]+x4" variabletype="">intrest</field>
+                <value name="VALUE">
+                  <block type="text_prompt_ext" id="$KY5~E-,3,2+T345:{Wg">
+                    <mutation type="NUMBER"></mutation>
+                    <field name="TYPE">NUMBER</field>
+                    <value name="TEXT">
+                      <block type="text" id="?FJC-+H1z#*F9OE34F40">
+                        <field name="TEXT">Jaarlijks intrest percentage:</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="variables_set" id="cw4jN{pwwa;5#m)jt6kX">
+                    <field name="VAR" id="VZJ7N|iZ24j2in4-.D$;" variabletype="">factor</field>
+                    <value name="VALUE">
+                      <block type="math_arithmetic" id="]S[5!df]fsB4bv:fRhqP">
+                        <field name="OP">ADD</field>
+                        <value name="A">
+                          <block type="math_number" id="G@F6j`/eiaQ55_F!,x$P">
+                            <field name="NUM">1</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_arithmetic" id="r`__owcpExIm`|`RiWt|">
+                            <field name="OP">DIVIDE</field>
+                            <value name="A">
+                              <block type="variables_get" id=";M7Lo3TQOkhcCKo;`U.8">
+                                <field name="VAR" id="#/GkvmHt=OXKn2VL]+x4" variabletype="">intrest</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="rydN}5XI[rk:VoZ9^XZ?">
+                                <field name="NUM">100</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="controls_for" id="a`)MHJ#m;`Kj3vUo]v0=">
+                        <field name="VAR" id="58mSX4tj^N1izTE8${xK" variabletype="">jaar</field>
+                        <value name="FROM">
+                          <block type="math_number" id="{ziSTJqzX:ik-HG2KR52">
+                            <field name="NUM">1</field>
+                          </block>
+                        </value>
+                        <value name="TO">
+                          <block type="variables_get" id="`4XZRMLb6kb3g^]NTPM(">
+                            <field name="VAR" id="#`%KT/E`$=e:}|m4zn*#" variabletype="">looptijd</field>
+                          </block>
+                        </value>
+                        <value name="BY">
+                          <block type="math_number" id="jzVuH-CC.pjUj97T#/AF">
+                            <field name="NUM">1</field>
+                          </block>
+                        </value>
+                        <statement name="DO">
+                          <block type="variables_set" id="[C;DdYHx|9)nIhn[tn}4">
+                            <field name="VAR" id="I*.nY5.}F1aC.-Z5k!hx" variabletype="">waarde</field>
+                            <value name="VALUE">
+                              <block type="math_arithmetic" id="OL07c-[wze:MbMgqTv$G">
+                                <field name="OP">MULTIPLY</field>
+                                <value name="A">
+                                  <block type="variables_get" id=";0sBeK|i-[+7/,rW2hxJ">
+                                    <field name="VAR" id="n_~?b|E|E]Do?G!TK=}x" variabletype="">beginkapitaal</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="variables_get" id="Ntv0C,*fv;]rzpF3@c0s">
+                                    <field name="VAR" id="VZJ7N|iZ24j2in4-.D$;" variabletype="">factor</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="text_print_sameline" id=":4x(B]*Z-q*?A7|Ms~fM">
+                                <value name="TEXT">
+                                  <block type="text" id="UD,@TM*XWSN/rwNDY|}j">
+                                    <field name="TEXT">Jaar </field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="text_print_sameline" id="Y^l;ZY`s/C)3`}utq8L~">
+                                    <value name="TEXT">
+                                      <block type="variables_get" id="8+(VDAoV9UZe5n7BZ2HI">
+                                        <field name="VAR" id="58mSX4tj^N1izTE8${xK" variabletype="">jaar</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="text_print_sameline" id="w36XaEB0bXg/WRNm7?=u">
+                                        <value name="TEXT">
+                                          <block type="text" id="68N7EaY//x@.1.vE1^[X">
+                                            <field name="TEXT">: </field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="text_print_sameline" id="_!sT!|9sHAL[G*A#GQZ;">
+                                            <value name="TEXT">
+                                              <block type="variables_get" id="Dr?2;0H8j(EDsIBy#e#N">
+                                                <field name="VAR" id="I*.nY5.}F1aC.-Z5k!hx" variabletype="">waarde</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="text_print" id="!fQ:$RXcqZ!|6v4)q#|R">
+                                                <value name="TEXT">
+                                                  <block type="text" id="1dAyD:ueMgLtR?!+`FFG">
+                                                    <field name="TEXT">.</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

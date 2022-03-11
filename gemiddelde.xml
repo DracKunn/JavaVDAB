@@ -1,0 +1,138 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="!^b||-EjS)US:qLQU#ro">getal</variable>
+    <variable type="" id="-zWfA6DvKdt{9]Ojb]uY">teller</variable>
+    <variable type="" id=",V`KVrj-9t82%YQJl2S_">som</variable>
+  </variables>
+  <block type="variables_set" id="c#p}Zf*8|L^O{!WTM|E}" x="25" y="37">
+    <field name="VAR" id="!^b||-EjS)US:qLQU#ro" variabletype="">getal</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="}GmR*9;L~.oW4PV=0eae">
+        <mutation type="NUMBER"></mutation>
+        <field name="TYPE">NUMBER</field>
+        <value name="TEXT">
+          <block type="text" id="23h(bt}UH2,(o^6DZ`+j">
+            <field name="TEXT">Getal (0 om te stoppen):</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="K!qUP0R5nTxj=nI!f_/I">
+        <field name="VAR" id="-zWfA6DvKdt{9]Ojb]uY" variabletype="">teller</field>
+        <value name="VALUE">
+          <block type="math_number" id="8inBY#B(b9WzU^@Rr)o1">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="B*_IJnpDHdQQx]^qO,qM">
+            <field name="VAR" id=",V`KVrj-9t82%YQJl2S_" variabletype="">som</field>
+            <value name="VALUE">
+              <block type="math_number" id="QE,l{$!}GP(}ZI9Ue`zQ">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+            <next>
+              <block type="controls_whileUntil" id="BY;[r;cOcP{[UUo@rh-P">
+                <field name="MODE">WHILE</field>
+                <value name="BOOL">
+                  <block type="logic_compare" id="#f0yA~Gxhe^Fs2QXA^tW">
+                    <field name="OP">NEQ</field>
+                    <value name="A">
+                      <block type="variables_get" id="35$YpNzBOT@d?r/(vFmk">
+                        <field name="VAR" id="!^b||-EjS)US:qLQU#ro" variabletype="">getal</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="u;Fl_NbdD]Y9.3)+Hc/`">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO">
+                  <block type="math_change" id="ifnm?CBON/6[ZNOMg|E1">
+                    <field name="VAR" id="-zWfA6DvKdt{9]Ojb]uY" variabletype="">teller</field>
+                    <value name="DELTA">
+                      <shadow type="math_number" id="7{ucLzy-npw+{HAVPHaj">
+                        <field name="NUM">1</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="math_change" id="Eb/ZrN3Q_{S0crv^8^zn">
+                        <field name="VAR" id=",V`KVrj-9t82%YQJl2S_" variabletype="">som</field>
+                        <value name="DELTA">
+                          <shadow type="math_number" id="xb1z^;9GexVv|fBo=mLa">
+                            <field name="NUM">1</field>
+                          </shadow>
+                          <block type="variables_get" id="(Ut2MA[W^Fl{@xRf?Sij">
+                            <field name="VAR" id="!^b||-EjS)US:qLQU#ro" variabletype="">getal</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="variables_set" id="`I^Y^g~ZjkXQj%%SsguD">
+                            <field name="VAR" id="!^b||-EjS)US:qLQU#ro" variabletype="">getal</field>
+                            <value name="VALUE">
+                              <block type="text_prompt_ext" id="cFL2?_MtG,}x,KZPN;u1">
+                                <mutation type="NUMBER"></mutation>
+                                <field name="TYPE">NUMBER</field>
+                                <value name="TEXT">
+                                  <block type="text" id="cmX(1E1Fb~jpU7MW@*I*">
+                                    <field name="TEXT">Getal (0 om te stoppen):</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="controls_if" id="-R}H8T%{-aYk*_wW~H$J">
+                    <value name="IF0">
+                      <block type="logic_compare" id="BY{8%.J3:58kH,8FsVD`">
+                        <field name="OP">NEQ</field>
+                        <value name="A">
+                          <block type="variables_get" id="v.!;h_t^$Mw{2BWab/@]">
+                            <field name="VAR" id="-zWfA6DvKdt{9]Ojb]uY" variabletype="">teller</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="H*r*P}T%b)8|!LEtp_Zc">
+                            <field name="NUM">0</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="text_print" id="O^lFE;wlly?_E,2*]8X:">
+                        <value name="TEXT">
+                          <block type="math_arithmetic" id="O*TLgLW2|?ZI10/@a01*">
+                            <field name="OP">DIVIDE</field>
+                            <value name="A">
+                              <block type="variables_get" id="kHeNg/@cG2LoG`/b{53m">
+                                <field name="VAR" id=",V`KVrj-9t82%YQJl2S_" variabletype="">som</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="variables_get" id="%CeKwK1ePZT3SDvw8rOo">
+                                <field name="VAR" id="-zWfA6DvKdt{9]Ojb]uY" variabletype="">teller</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

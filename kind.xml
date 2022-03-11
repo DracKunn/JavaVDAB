@@ -1,0 +1,57 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="kUgR(,;fSSzh[}qEMY$I">leeftijd</variable>
+  </variables>
+  <block type="variables_set" id="pUAwyUt7-^X^j|ooJ4^)" x="18" y="37">
+    <field name="VAR" id="kUgR(,;fSSzh[}qEMY$I" variabletype="">leeftijd</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id=":O.fo;XIpSl8giqS5j}]">
+        <mutation type="NUMBER"></mutation>
+        <field name="TYPE">NUMBER</field>
+        <value name="TEXT">
+          <block type="text" id="L(GP2cP4C7-Un]*;Rz?o">
+            <field name="TEXT">Wat is je leeftijd? (jaren)</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="controls_if" id="LG)0@n)q,P}soNAkS|va">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="3@B]`{XP~%kMFFLp71nH">
+            <field name="OP">GTE</field>
+            <value name="A">
+              <block type="variables_get" id=".)Q|#^6FwvZ%YfkEUm4U">
+                <field name="VAR" id="kUgR(,;fSSzh[}qEMY$I" variabletype="">leeftijd</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="YDOg[w9T]CUI+Jn#tAd`">
+                <field name="NUM">18</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="text_print" id="avca1K?gE;FN.*Erk#Wi">
+            <value name="TEXT">
+              <block type="text" id="A[xKVO,UJ^z:T+D^/oF|">
+                <field name="TEXT">Je bent volwassen.</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="text_print" id="Gvg?i+`XhC)_J:NvXNUn">
+            <value name="TEXT">
+              <block type="text" id="L*3q3so8GgSH^YypuiP=">
+                <field name="TEXT">Je bent een kind.</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

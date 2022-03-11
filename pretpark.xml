@@ -1,0 +1,152 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="Z!W9TDJxTo,4zJx?*e=I">volwassenen</variable>
+    <variable type="" id="-=!4=rA1QnY[kQ~IWk8n">kinderen</variable>
+    <variable type="" id="5aBeFg}%kq)ZB*-.2?fU">leeftijd</variable>
+  </variables>
+  <block type="variables_set" id=",uiKITsgjT}[Ddr#^cAW" x="11" y="31">
+    <field name="VAR" id="Z!W9TDJxTo,4zJx?*e=I" variabletype="">volwassenen</field>
+    <value name="VALUE">
+      <block type="math_number" id="a}gfg)~szZ,askD.RI(|">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="!)NH%n+aqZnyq{J_hjs_">
+        <field name="VAR" id="-=!4=rA1QnY[kQ~IWk8n" variabletype="">kinderen</field>
+        <value name="VALUE">
+          <block type="math_number" id="OP0A7^j[GxewuCi)IFDO">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="@`EGf`:%L`OHC`4XcT8r">
+            <field name="VAR" id="5aBeFg}%kq)ZB*-.2?fU" variabletype="">leeftijd</field>
+            <value name="VALUE">
+              <block type="text_prompt_ext" id="eOE07LTtatJ~+X/zin4Q">
+                <mutation type="NUMBER"></mutation>
+                <field name="TYPE">NUMBER</field>
+                <value name="TEXT">
+                  <block type="text" id="}B,ECqH.ZY{m*]v`!zWj">
+                    <field name="TEXT">Leeftijd (0 om te stoppen):</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="controls_whileUntil" id="`2o_]x`DFcZPtU8-Ii2!">
+                <field name="MODE">WHILE</field>
+                <value name="BOOL">
+                  <block type="logic_compare" id="R;kUJh1QYNI-T9B.4^z*">
+                    <field name="OP">NEQ</field>
+                    <value name="A">
+                      <block type="variables_get" id="h!-yt]y{PO+QdZG,,ENd">
+                        <field name="VAR" id="5aBeFg}%kq)ZB*-.2?fU" variabletype="">leeftijd</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="ZXbCNow@gOI~GH9{ZCCl">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO">
+                  <block type="controls_ifelse" id="[U:k~$Ad-`k6MaW-gm6Y">
+                    <value name="IF0">
+                      <block type="logic_compare" id="!noQQckqX-N3[cl+Fj~Y">
+                        <field name="OP">GTE</field>
+                        <value name="A">
+                          <block type="variables_get" id="nY9QLQCh$K|=|p/mi)MW">
+                            <field name="VAR" id="5aBeFg}%kq)ZB*-.2?fU" variabletype="">leeftijd</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="AvT#ro]8Kpof-wiUEwK,">
+                            <field name="NUM">18</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="math_change" id="fF9%C53Rfo8f0o867j8T">
+                        <field name="VAR" id="Z!W9TDJxTo,4zJx?*e=I" variabletype="">volwassenen</field>
+                        <value name="DELTA">
+                          <shadow type="math_number" id="`DrWqm5]v~r-/UvPOv`!">
+                            <field name="NUM">1</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </statement>
+                    <statement name="ELSE">
+                      <block type="math_change" id="rp5!PbUV;3Xf=@mdA@Re">
+                        <field name="VAR" id="-=!4=rA1QnY[kQ~IWk8n" variabletype="">kinderen</field>
+                        <value name="DELTA">
+                          <shadow type="math_number" id="0dn#g*z3PDlqoWT=CLd]">
+                            <field name="NUM">1</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="variables_set" id="r09d3N?Nx0DI%+]sW}Cs">
+                        <field name="VAR" id="5aBeFg}%kq)ZB*-.2?fU" variabletype="">leeftijd</field>
+                        <value name="VALUE">
+                          <block type="text_prompt_ext" id="owDT43T;Ec86FNeG_]iz">
+                            <mutation type="NUMBER"></mutation>
+                            <field name="TYPE">NUMBER</field>
+                            <value name="TEXT">
+                              <block type="text" id=".B3Q7]v)!,I]TL.v6/],">
+                                <field name="TEXT">Leeftijd (0 om te stoppen):</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="text_print_sameline" id="dG4my#hD}:/K+;m=DDH#">
+                    <value name="TEXT">
+                      <block type="text" id="P79;)F%KQxNI|kFV^}hM">
+                        <field name="TEXT">Aantal volwassenen:</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="text_print" id="kTV)unaws!`-_J2ykYSi">
+                        <value name="TEXT">
+                          <block type="variables_get" id="Uzi5Ip7%RTo#jVE}Y0|v">
+                            <field name="VAR" id="Z!W9TDJxTo,4zJx?*e=I" variabletype="">volwassenen</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="text_print_sameline" id="{hJI1dp,-n-Lo1Y^D0Bq">
+                            <value name="TEXT">
+                              <block type="text" id="Fy20N].^DRR~FT7?wuAQ">
+                                <field name="TEXT">Aantal kinderen:</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="text_print" id="U9[fN9Z8-}TF_,}0%qwD">
+                                <value name="TEXT">
+                                  <block type="variables_get" id="_q7wTwqPCF}pzOCIZ[+]">
+                                    <field name="VAR" id="-=!4=rA1QnY[kQ~IWk8n" variabletype="">kinderen</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

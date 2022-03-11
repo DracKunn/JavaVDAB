@@ -1,0 +1,56 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="OwF4.Q8!pw]Z+j)s9uV4">evenGetal</variable>
+    <variable type="" id="ycrC2AdHa!5!`3B0*-/e">som</variable>
+  </variables>
+  <block type="variables_set" id="4+2:b)8xckjYB.^=DPzf" x="48" y="65">
+    <field name="VAR" id="ycrC2AdHa!5!`3B0*-/e" variabletype="">som</field>
+    <value name="VALUE">
+      <block type="math_number" id="CHZz;O;;zZj_i+C$XZ=V">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <next>
+      <block type="controls_for" id="I*+_w8;n,VPNM;Hj~`cI">
+        <field name="VAR" id="OwF4.Q8!pw]Z+j)s9uV4" variabletype="">evenGetal</field>
+        <value name="FROM">
+          <block type="math_number" id="/^};XMaGj4uX._8F;Lm5">
+            <field name="NUM">2</field>
+          </block>
+        </value>
+        <value name="TO">
+          <block type="math_number" id="P0oT2nfr(,^)].~:x4M(">
+            <field name="NUM">10</field>
+          </block>
+        </value>
+        <value name="BY">
+          <block type="math_number" id="vZ4/5OPiebJR{..K.!V9">
+            <field name="NUM">2</field>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="math_change" id="4C84lxPtU_]7b}8#@pLJ">
+            <field name="VAR" id="ycrC2AdHa!5!`3B0*-/e" variabletype="">som</field>
+            <value name="DELTA">
+              <shadow type="math_number" id="6(1v#I6COVS`AUc5cE^6">
+                <field name="NUM">1</field>
+              </shadow>
+              <block type="variables_get" id="rU~FG+Y1NLr;[m$,?^M+">
+                <field name="VAR" id="OwF4.Q8!pw]Z+j)s9uV4" variabletype="">evenGetal</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <next>
+          <block type="text_print" id="*XB_Gs0-b$:`Igrr/]u`">
+            <value name="TEXT">
+              <block type="variables_get" id="i=z(0?40/oX0*6k%SCeB">
+                <field name="VAR" id="ycrC2AdHa!5!`3B0*-/e" variabletype="">som</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

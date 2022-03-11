@@ -1,0 +1,99 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="-NBvxMd5cY,@x:^BY]TB">prijs</variable>
+    <variable type="" id="=#w#{/gkE9A(MWRgcJ~,">aantal</variable>
+    <variable type="" id="No.cDn~DmBQCvwB{Fi,j">totaal</variable>
+  </variables>
+  <block type="variables_set" id="cg?74q0ZL,e4D?/FJLZ," x="15" y="29">
+    <field name="VAR" id="-NBvxMd5cY,@x:^BY]TB" variabletype="">prijs</field>
+    <value name="VALUE">
+      <block type="math_number" id="1r]_t.IdUz[8d8[FdHW@">
+        <field name="NUM">3</field>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="em~MR2Gzzx;8k8Bj,EI)">
+        <field name="VAR" id="=#w#{/gkE9A(MWRgcJ~," variabletype="">aantal</field>
+        <value name="VALUE">
+          <block type="text_prompt_ext" id="I@ng!3}3Uk1JgijLH9#0">
+            <mutation type="NUMBER"></mutation>
+            <field name="TYPE">NUMBER</field>
+            <value name="TEXT">
+              <block type="text" id="|)jlkWW0gii{eR|_@@^b">
+                <field name="TEXT">Aantal limonades:</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="|+;JWAL,U#.jtRVe4Ma0">
+            <field name="VAR" id="No.cDn~DmBQCvwB{Fi,j" variabletype="">totaal</field>
+            <value name="VALUE">
+              <block type="math_arithmetic" id="XB;-qw[6c(6OE:7eq4q[">
+                <field name="OP">MULTIPLY</field>
+                <value name="A">
+                  <block type="variables_get" id="xwldW-qH{]}z,B;;|.fN">
+                    <field name="VAR" id="-NBvxMd5cY,@x:^BY]TB" variabletype="">prijs</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="variables_get" id="%$lkX($eDYq+2?+BE;;h">
+                    <field name="VAR" id="=#w#{/gkE9A(MWRgcJ~," variabletype="">aantal</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="controls_if" id="FxkZ=Z#8IC[jOr%BKri{">
+                <value name="IF0">
+                  <block type="logic_compare" id="[Jti7Ue2EH[GWCNISf~e">
+                    <field name="OP">GT</field>
+                    <value name="A">
+                      <block type="variables_get" id="QxmkMjQ,_L~AO#I/gJ3x">
+                        <field name="VAR" id="=#w#{/gkE9A(MWRgcJ~," variabletype="">aantal</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="8YBowxtRe8h#8Ujc,Y;O">
+                        <field name="NUM">10</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="variables_set" id="h-7mVHEw_m5:|JGy=AUJ">
+                    <field name="VAR" id="No.cDn~DmBQCvwB{Fi,j" variabletype="">totaal</field>
+                    <value name="VALUE">
+                      <block type="math_arithmetic" id="CN8U=~YlC%3y.T~2foMM">
+                        <field name="OP">MULTIPLY</field>
+                        <value name="A">
+                          <block type="variables_get" id="~Etx}F%ew5=.b0Pu6{r-">
+                            <field name="VAR" id="No.cDn~DmBQCvwB{Fi,j" variabletype="">totaal</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="_aZ+tvM0,%i-Om5.8S$R">
+                            <field name="NUM">0.95</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <next>
+                  <block type="text_print" id="f{_gfnsxJ{++b)K4Ebia">
+                    <value name="TEXT">
+                      <block type="variables_get" id="hd_+VR:b%;*k9h=b%).q">
+                        <field name="VAR" id="No.cDn~DmBQCvwB{Fi,j" variabletype="">totaal</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

@@ -1,0 +1,115 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id=",o$K_gIxy2SpI6TSMryB">getal1</variable>
+    <variable type="" id="8daF8t5/hM[QGp$[1O@+">getal2</variable>
+    <variable type="" id="Go.)YL]u|phWS1z4G[Mk">grootste</variable>
+  </variables>
+  <block type="variables_set" id="9^N]MQLG%_dYgXAD|p=v" x="16" y="45">
+    <field name="VAR" id=",o$K_gIxy2SpI6TSMryB" variabletype="">getal1</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="Y.3SS|/y^A-uy_uno$;%">
+        <mutation type="NUMBER"></mutation>
+        <field name="TYPE">NUMBER</field>
+        <value name="TEXT">
+          <block type="text" id="D_|B67jeHKW$/X[FumDJ">
+            <field name="TEXT">Getal 1:</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="M@-jJ5mrw#u{c`R;QDnD">
+        <field name="VAR" id="8daF8t5/hM[QGp$[1O@+" variabletype="">getal2</field>
+        <value name="VALUE">
+          <block type="text_prompt_ext" id="mFxqM|aT6L`oD|^KrV$T">
+            <mutation type="NUMBER"></mutation>
+            <field name="TYPE">NUMBER</field>
+            <value name="TEXT">
+              <block type="text" id="ey`6$iZo=.Y~^A!`KYS]">
+                <field name="TEXT">Getal 2:</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="controls_if" id=")A@j,3+(jfZIYbV|~JMf">
+            <mutation else="1"></mutation>
+            <value name="IF0">
+              <block type="logic_compare" id="]S]aXj[R8aTsYvHV|I=!">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="Ec/5X8p]#Q-B#MKBA$p:">
+                    <field name="VAR" id=",o$K_gIxy2SpI6TSMryB" variabletype="">getal1</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="variables_get" id="_2mX*)m:jHUYT0,m+:Kt">
+                    <field name="VAR" id="8daF8t5/hM[QGp$[1O@+" variabletype="">getal2</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="text_print" id="VEs_;[XH|9:6_h)`j+vm">
+                <value name="TEXT">
+                  <block type="text" id="lcd:6;Mf5s5xp4~c-8Wx">
+                    <field name="TEXT">Gelijk.</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="controls_if" id=")i}!:TwX4Ei5=u=I%#$n">
+                <mutation else="1"></mutation>
+                <value name="IF0">
+                  <block type="logic_compare" id="Nm8uk(!*vT/!5#;Ilv?7">
+                    <field name="OP">GT</field>
+                    <value name="A">
+                      <block type="variables_get" id="/2f2Mssyfh9(_6(XKYgb">
+                        <field name="VAR" id=",o$K_gIxy2SpI6TSMryB" variabletype="">getal1</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="variables_get" id="BTUp6`~UX,JhZUVHn/n_">
+                        <field name="VAR" id="8daF8t5/hM[QGp$[1O@+" variabletype="">getal2</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="variables_set" id="K?|h9?}uyC)B^Ov%Y8cS">
+                    <field name="VAR" id="Go.)YL]u|phWS1z4G[Mk" variabletype="">grootste</field>
+                    <value name="VALUE">
+                      <block type="variables_get" id="$ahRocg,qRWFzj/)FHa=">
+                        <field name="VAR" id=",o$K_gIxy2SpI6TSMryB" variabletype="">getal1</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <statement name="ELSE">
+                  <block type="variables_set" id="E+|2[E2gT[d;i%$@}pa)">
+                    <field name="VAR" id="Go.)YL]u|phWS1z4G[Mk" variabletype="">grootste</field>
+                    <value name="VALUE">
+                      <block type="variables_get" id="/-EYb$+^)OB7r{?VFp`7">
+                        <field name="VAR" id="8daF8t5/hM[QGp$[1O@+" variabletype="">getal2</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <next>
+                  <block type="text_print" id="05v9u*=u?ZB2.Jr9hp#:">
+                    <value name="TEXT">
+                      <block type="variables_get" id="*KeIKu*(Yy9s$^[$a]CZ">
+                        <field name="VAR" id="Go.)YL]u|phWS1z4G[Mk" variabletype="">grootste</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

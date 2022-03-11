@@ -1,0 +1,111 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="#`E?`r.dnRdF,!yuRiPM">temperatuur</variable>
+    <variable type="" id="P3~/0U5hy~42{L5=-2Hh">regen</variable>
+  </variables>
+  <block type="variables_set" id="+V`3|JZbH?%JWZZd9W^I" x="18" y="51">
+    <field name="VAR" id="#`E?`r.dnRdF,!yuRiPM" variabletype="">temperatuur</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="X@3_yJhiDG~vlopM;*68">
+        <mutation type="TEXT"></mutation>
+        <field name="TYPE">TEXT</field>
+        <value name="TEXT">
+          <block type="text" id="zbOb::#$@!UZ$b:]+%~Q">
+            <field name="TEXT">Temperatuur:</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="controls_if" id="R(0yXd}edD;RCZ*3v@1d">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="8[qyJ)b1?$*rxzN]Xd}D">
+            <field name="OP">LTE</field>
+            <value name="A">
+              <block type="variables_get" id="E/~}ebYVqqC*:mZL@H0l">
+                <field name="VAR" id="#`E?`r.dnRdF,!yuRiPM" variabletype="">temperatuur</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="?`cR%+rH$6a?$eM!;g%F">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="text_print" id="VP+sx/V_6y9EV+*M1g,,">
+            <value name="TEXT">
+              <block type="text" id="7idt-2~i4f(,7=uiD3_T">
+                <field name="TEXT">Het vriest.</field>
+              </block>
+            </value>
+            <next>
+              <block type="text_print" id="r6JAjw=?u=[FK0_,0Qwy">
+                <value name="TEXT">
+                  <block type="text" id=")d}*K4))l/mQZ|QFK-zG">
+                    <field name="TEXT">Je doet beter een dikke jas aan.</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="text_print" id="TFF]MHN?]-UKIuneIOAZ">
+            <value name="TEXT">
+              <block type="text" id="kl{$5{IMBRY3,*EPG1K8">
+                <field name="TEXT">Een lichte jas volstaat.</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <next>
+          <block type="variables_set" id="*|W-N}!ze*1HEh+!f6jZ">
+            <field name="VAR" id="P3~/0U5hy~42{L5=-2Hh" variabletype="">regen</field>
+            <value name="VALUE">
+              <block type="text_prompt_ext" id="U,~j+]70us6mUmO1pj;e">
+                <mutation type="TEXT"></mutation>
+                <field name="TYPE">TEXT</field>
+                <value name="TEXT">
+                  <block type="text" id="vAeK(AwYC|%E0PyVJjg|">
+                    <field name="TEXT">Zal het regenen? (ja of nee):</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="controls_if" id="keS;StQmGbYl`Jwdnra:">
+                <value name="IF0">
+                  <block type="logic_compare" id="*gYf_c8J,~)0q;%=!u_!">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="variables_get" id="nd[E1aLsU-b!+gSC~NA~">
+                        <field name="VAR" id="P3~/0U5hy~42{L5=-2Hh" variabletype="">regen</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="text" id="^/AQjQ+~?:qa;S4v9a#p">
+                        <field name="TEXT">ja</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="text_print" id="nTv174}1cRQ=Lr_;%NIY">
+                    <value name="TEXT">
+                      <block type="text" id=".K2(E-*z9$}ZEY[_Rh,,">
+                        <field name="TEXT">Neem een paraplu mee.</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

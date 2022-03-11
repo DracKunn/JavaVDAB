@@ -1,0 +1,33 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="SwvIpC)nQzfWUl671|6~">getal</variable>
+    <variable type="" id="GA|9mZ78OqFCO,;vF0eK">i</variable>
+  </variables>
+  <block type="controls_for" id="ID/9|hToyJe8f[bU-*G)" x="-13" y="63">
+    <field name="VAR" id="SwvIpC)nQzfWUl671|6~" variabletype="">getal</field>
+    <value name="FROM">
+      <block type="math_number" id="F]4)4:4MXKoNH3FfhTCu">
+        <field name="NUM">10</field>
+      </block>
+    </value>
+    <value name="TO">
+      <block type="math_number" id="PALaX[yxkN{eqG}Ysr[w">
+        <field name="NUM">1</field>
+      </block>
+    </value>
+    <value name="BY">
+      <block type="math_number" id="y4S+@()nylMXuL(wpo~a">
+        <field name="NUM">-1</field>
+      </block>
+    </value>
+    <statement name="DO">
+      <block type="text_print" id="[8xPL+b6Ywh-0)G#!GSI">
+        <value name="TEXT">
+          <block type="variables_get" id="wwM9@%-BCwqAm-|?^WZr">
+            <field name="VAR" id="SwvIpC)nQzfWUl671|6~" variabletype="">getal</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+</xml>

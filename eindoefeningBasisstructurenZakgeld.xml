@@ -1,0 +1,750 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="sd/Ja[NlDsBiw8}$@T|0">leeftijd</variable>
+    <variable type="" id="#mpr!-Y/0c7.l6fIFqh2">zakgeld</variable>
+    <variable type="" id="EHBi).dk5`Ala@(Z}UPD">keuze</variable>
+    <variable type="" id="gibsHdEnKc?^2]B`((gP">teller</variable>
+    <variable type="" id="_A(^XvKYTe$..pLar=4f">zakgeldSom</variable>
+    <variable type="" id="e:grWkmUC1CXZ]T50L~K">drieJaarlijks</variable>
+    <variable type="" id="m+Lf7[bacB);h^gn:J!,">startLeeftijd</variable>
+    <variable type="" id="e94i|q3u:}:}8NaCR/:}">geenZakgeld</variable>
+  </variables>
+  <block type="variables_set" id="}p~A}Y=qZ%#,2`WB4mr," x="-2" y="76">
+    <field name="VAR" id="m+Lf7[bacB);h^gn:J!," variabletype="">startLeeftijd</field>
+    <value name="VALUE">
+      <block type="math_number" id="H3r5+sTM(M,6m3|xgZX(">
+        <field name="NUM">5</field>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="+;S:seeU/8XzB-ck;PVK">
+        <field name="VAR" id="#mpr!-Y/0c7.l6fIFqh2" variabletype="">zakgeld</field>
+        <value name="VALUE">
+          <block type="declare_real" id="Ie}T$qZh9x6$)r%=3MGC">
+            <value name="REAL_INPUT">
+              <block type="text_prompt_ext" id=":!Cd]9~wD$OKIxCWR)qN">
+                <mutation type="NUMBER"></mutation>
+                <field name="TYPE">NUMBER</field>
+                <value name="TEXT">
+                  <block type="text" id="qhh_6TQ}hl.)}R`E]fyZ">
+                    <field name="TEXT">Zakgeld op 5 jarige leeftijd:</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="text_print_sameline" id="H(0LT-Y;[st,Y;.5$ER$">
+            <value name="TEXT">
+              <block type="text" id="9.@DqIC7j_Vet0Tr0{c|">
+                <field name="TEXT">Zakgeld: </field>
+              </block>
+            </value>
+            <next>
+              <block type="text_print" id="2/*pZ@G*(-.btesfEvoW">
+                <value name="TEXT">
+                  <block type="variables_get" id="ys#h8ErKnO*iWj,_RhHY">
+                    <field name="VAR" id="#mpr!-Y/0c7.l6fIFqh2" variabletype="">zakgeld</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="variables_set" id="KIIT)%qR9~w2_*}[2=is">
+                    <field name="VAR" id="sd/Ja[NlDsBiw8}$@T|0" variabletype="">leeftijd</field>
+                    <value name="VALUE">
+                      <block type="declare_integer" id="pfX]J?rMuBB)%$z`vF=d">
+                        <value name="INTEGER_INPUT">
+                          <block type="text_prompt_ext" id="w@PItU:YBcfj=QT1*6u3">
+                            <mutation type="NUMBER"></mutation>
+                            <field name="TYPE">NUMBER</field>
+                            <value name="TEXT">
+                              <block type="text" id="(RyBaBzc17NPOEiRQ.V@">
+                                <field name="TEXT">Huidige leeftijd:</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="controls_if" id=")*F^WNw%ZR,uFXXW}h?G">
+                        <mutation elseif="1" else="1"></mutation>
+                        <value name="IF0">
+                          <block type="logic_compare" id="0[zRnY#3?9:0YO3:vnlH">
+                            <field name="OP">LT</field>
+                            <value name="A">
+                              <block type="variables_get" id="2ni}2GDt2Is5Br2JG4V-">
+                                <field name="VAR" id="sd/Ja[NlDsBiw8}$@T|0" variabletype="">leeftijd</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="variables_get" id="Ie)-(eLop]B7hoz2ok-B">
+                                <field name="VAR" id="m+Lf7[bacB);h^gn:J!," variabletype="">startLeeftijd</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="text_print" id="FIf?E=b|G8n6WlP8TM0q">
+                            <value name="TEXT">
+                              <block type="text" id="tf@6_p_8.L{I(xfu6~3Z">
+                                <field name="TEXT">Dit kind is te jong voor zakgeld.</field>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                        <value name="IF1">
+                          <block type="logic_compare" id="aNDK|k~sGI!k|0nh?b.e">
+                            <field name="OP">GT</field>
+                            <value name="A">
+                              <block type="variables_get" id="-[J2{iDy[Ewn%Gi/xA7u">
+                                <field name="VAR" id="sd/Ja[NlDsBiw8}$@T|0" variabletype="">leeftijd</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="/^,dxw#,WP+!J,^y-Kt,">
+                                <field name="NUM">21</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO1">
+                          <block type="text_print" id="!18ebUb[2Q8bz7^aMLlS">
+                            <value name="TEXT">
+                              <block type="text" id="MXe_zkstm%z@^kpB0j^f">
+                                <field name="TEXT">Deze persoon is te oud voor zakgeld.</field>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                        <statement name="ELSE">
+                          <block type="text_print_sameline" id="lf/@XGIwP*(V^JJ`SiWm">
+                            <value name="TEXT">
+                              <block type="text" id="6KvYCUqVZLU.HS#=.3-l">
+                                <field name="TEXT">Leeftijd: </field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="text_print" id="CZDc(16KFRH]WQ|R8B.6">
+                                <value name="TEXT">
+                                  <block type="variables_get" id="o]s!`^Pb^Ol7^+tUV@5G">
+                                    <field name="VAR" id="sd/Ja[NlDsBiw8}$@T|0" variabletype="">leeftijd</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="text_print" id="iTRNXml{EWT7X*Nmec1P">
+                                    <next>
+                                      <block type="text_print" id=")U$xXR2*lnAlD@*=ABb$">
+                                        <value name="TEXT">
+                                          <block type="text" id="VZ7K*PXC9sjOS_iI!G@|">
+                                            <field name="TEXT">1. Bereken met jaarlijkse verhoging van 50%</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="text_print" id="cZApA([.hci*hbLsAHuh">
+                                            <value name="TEXT">
+                                              <block type="text" id="}JDQ-yAyY@f{kP4b3c([">
+                                                <field name="TEXT">2. Bereken met jaarlijkse verhoging van 5 €</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="text_print" id="-?nN?spdD[d|{Osf?~AH">
+                                                <value name="TEXT">
+                                                  <block type="text" id="|K,-,[vmUgGM1ePX~Eg_">
+                                                    <field name="TEXT">3. Berekenen met 3 jaarlijkse verdubbeling</field>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="text_print" id="s#qcZKJ]r^N5|yOyGI8K">
+                                                    <next>
+                                                      <block type="variables_set" id="+p0Zp0a-l,rA]/$f,=2Q">
+                                                        <field name="VAR" id="EHBi).dk5`Ala@(Z}UPD" variabletype="">keuze</field>
+                                                        <value name="VALUE">
+                                                          <block type="declare_integer" id="#Uh|,5|k_6uVp*^i%sXu">
+                                                            <value name="INTEGER_INPUT">
+                                                              <block type="text_prompt_ext" id=":p7-XYs#Imn_?iUFab3z">
+                                                                <mutation type="NUMBER"></mutation>
+                                                                <field name="TYPE">NUMBER</field>
+                                                                <value name="TEXT">
+                                                                  <block type="text" id="%09%:z].]5d946zxhlI1">
+                                                                    <field name="TEXT">Verhogings methode (1,2,3; 0 om te stoppen)</field>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </value>
+                                                        <next>
+                                                          <block type="controls_whileUntil" id="mo|_4Ixavy=gJJ_^Ax8a">
+                                                            <field name="MODE">WHILE</field>
+                                                            <value name="BOOL">
+                                                              <block type="logic_compare" id="M#okkjNYmy_|FWJSh#]{">
+                                                                <field name="OP">NEQ</field>
+                                                                <value name="A">
+                                                                  <block type="variables_get" id="No]nHkUnX*R#zD(kJ/v,">
+                                                                    <field name="VAR" id="EHBi).dk5`Ala@(Z}UPD" variabletype="">keuze</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="B">
+                                                                  <block type="math_number" id="WJ0O!tAK%%ZFCNFmcI[j">
+                                                                    <field name="NUM">0</field>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </value>
+                                                            <statement name="DO">
+                                                              <block type="variables_set" id="3SR3B,h}!h}#W~n?u)T;">
+                                                                <field name="VAR" id="_A(^XvKYTe$..pLar=4f" variabletype="">zakgeldSom</field>
+                                                                <value name="VALUE">
+                                                                  <block type="variables_get" id="@jGTmaw{3Mo,,S!ts{c7">
+                                                                    <field name="VAR" id="#mpr!-Y/0c7.l6fIFqh2" variabletype="">zakgeld</field>
+                                                                  </block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="controls_if" id="Q$0z5$il!x6#4{T(To|0">
+                                                                    <mutation else="1"></mutation>
+                                                                    <value name="IF0">
+                                                                      <block type="logic_operation" id="k@juN/.]p(:V,axuKBB7">
+                                                                        <field name="OP">OR</field>
+                                                                        <value name="A">
+                                                                          <block type="logic_compare" id="G[TA|zp0FoCc2C{[1FQQ">
+                                                                            <field name="OP">EQ</field>
+                                                                            <value name="A">
+                                                                              <block type="variables_get" id="Ao!x7Om!q2~,q(1nWGp[">
+                                                                                <field name="VAR" id="EHBi).dk5`Ala@(Z}UPD" variabletype="">keuze</field>
+                                                                              </block>
+                                                                            </value>
+                                                                            <value name="B">
+                                                                              <block type="math_number" id="%7b3*om8;Ibjw@J(g!`K">
+                                                                                <field name="NUM">1</field>
+                                                                              </block>
+                                                                            </value>
+                                                                          </block>
+                                                                        </value>
+                                                                        <value name="B">
+                                                                          <block type="logic_operation" id="os,PptiP+`{x;S-/}f!E">
+                                                                            <field name="OP">OR</field>
+                                                                            <value name="A">
+                                                                              <block type="logic_compare" id="uJCP+O9xP!q+zP9j)!0l">
+                                                                                <field name="OP">EQ</field>
+                                                                                <value name="A">
+                                                                                  <block type="variables_get" id="N1NEr7!wr3$orply@J*l">
+                                                                                    <field name="VAR" id="EHBi).dk5`Ala@(Z}UPD" variabletype="">keuze</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <value name="B">
+                                                                                  <block type="math_number" id="EK+y89d29aTuR9o_~sCh">
+                                                                                    <field name="NUM">2</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                              </block>
+                                                                            </value>
+                                                                            <value name="B">
+                                                                              <block type="logic_compare" id="5@3]+6Q.rAAq-FU/C3!K">
+                                                                                <field name="OP">EQ</field>
+                                                                                <value name="A">
+                                                                                  <block type="variables_get" id="`=h(|rei2Y#O*qO)~tdt">
+                                                                                    <field name="VAR" id="EHBi).dk5`Ala@(Z}UPD" variabletype="">keuze</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <value name="B">
+                                                                                  <block type="math_number" id="LT=CCD$xSO85.%!_nyYQ">
+                                                                                    <field name="NUM">3</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                              </block>
+                                                                            </value>
+                                                                          </block>
+                                                                        </value>
+                                                                      </block>
+                                                                    </value>
+                                                                    <statement name="DO0">
+                                                                      <block type="text_print_sameline" id="m}GS}[LrLoic*$H^{vnT">
+                                                                        <value name="TEXT">
+                                                                          <block type="text" id="*Ey$)?$!n%r{I3-EO4cz">
+                                                                            <field name="TEXT">Keuze: </field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <next>
+                                                                          <block type="text_print" id="YLhh)?t,K?XBAWLL;W|n">
+                                                                            <value name="TEXT">
+                                                                              <block type="variables_get" id="[Kr(.$8p_B,qx`,iq2{L">
+                                                                                <field name="VAR" id="EHBi).dk5`Ala@(Z}UPD" variabletype="">keuze</field>
+                                                                              </block>
+                                                                            </value>
+                                                                            <next>
+                                                                              <block type="switch_case" id="zCbsmis$9aw6JghJE(.r">
+                                                                                <mutation order="0,0,0"></mutation>
+                                                                                <value name="CONDITION">
+                                                                                  <block type="variables_get" id="@`-0Sxd12cDyoPuQ1abJ">
+                                                                                    <field name="VAR" id="EHBi).dk5`Ala@(Z}UPD" variabletype="">keuze</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <value name="CASECONDITION0">
+                                                                                  <block type="math_number" id="%DmJ)2j2BTUSOyi7yev:">
+                                                                                    <field name="NUM">1</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <statement name="CASE0">
+                                                                                  <block type="controls_for" id="/P([?i~Tmv#xt{L`*4Fe">
+                                                                                    <field name="VAR" id="gibsHdEnKc?^2]B`((gP" variabletype="">teller</field>
+                                                                                    <value name="FROM">
+                                                                                      <block type="variables_get" id="1*0H(P}rdyBwpb*-vw?G">
+                                                                                        <field name="VAR" id="m+Lf7[bacB);h^gn:J!," variabletype="">startLeeftijd</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                    <value name="TO">
+                                                                                      <block type="variables_get" id=".p4_H9h/VaoKlx.(ku7V">
+                                                                                        <field name="VAR" id="sd/Ja[NlDsBiw8}$@T|0" variabletype="">leeftijd</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                    <value name="BY">
+                                                                                      <block type="math_number" id=":wM%ZZO{}tDV[6Rb^]e-">
+                                                                                        <field name="NUM">1</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                    <statement name="DO">
+                                                                                      <block type="text_print_sameline" id="7IyEz]Bvt~`9#ci1f,MZ">
+                                                                                        <value name="TEXT">
+                                                                                          <block type="text" id="2:G}SpC9@L4i`lTJL.Va">
+                                                                                            <field name="TEXT">Leeftijd </field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <next>
+                                                                                          <block type="text_print_sameline" id="gVNCIfm!{*q-HbD2!:uk">
+                                                                                            <value name="TEXT">
+                                                                                              <block type="variables_get" id="62-0Azb[ywzsp)lw]L2O">
+                                                                                                <field name="VAR" id="gibsHdEnKc?^2]B`((gP" variabletype="">teller</field>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                            <next>
+                                                                                              <block type="text_print_sameline" id="SS|yRL+^Xy?wBTk8m$F/">
+                                                                                                <value name="TEXT">
+                                                                                                  <block type="text" id="Jaa(OkSmPvZL6EG?w+rF">
+                                                                                                    <field name="TEXT">: </field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                                <next>
+                                                                                                  <block type="text_print_sameline" id="$=,0297n|BtGafTgM1h`">
+                                                                                                    <value name="TEXT">
+                                                                                                      <block type="variables_get" id=".K%Ty,9jk9qU%5U@`#;E">
+                                                                                                        <field name="VAR" id="_A(^XvKYTe$..pLar=4f" variabletype="">zakgeldSom</field>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                    <next>
+                                                                                                      <block type="text_print" id="N/Z$x%Z/~r7=Ma4OqU/q">
+                                                                                                        <value name="TEXT">
+                                                                                                          <block type="text" id="G3mduP8(~_1`UW[Q.X{w">
+                                                                                                            <field name="TEXT"> €</field>
+                                                                                                          </block>
+                                                                                                        </value>
+                                                                                                        <next>
+                                                                                                          <block type="variables_set" id="eY7EOdg+#6n:z:(^T6I2">
+                                                                                                            <field name="VAR" id="_A(^XvKYTe$..pLar=4f" variabletype="">zakgeldSom</field>
+                                                                                                            <value name="VALUE">
+                                                                                                              <block type="round_to_decimals" id="@G/LaLI0$H!]R?;+!;B5">
+                                                                                                                <value name="amount">
+                                                                                                                  <block type="math_arithmetic" id="-X`;hkUGCv5Q4l+Y3XIb">
+                                                                                                                    <field name="OP">MULTIPLY</field>
+                                                                                                                    <value name="A">
+                                                                                                                      <block type="variables_get" id="o[|oWiDMD5p#AuV*PiEr">
+                                                                                                                        <field name="VAR" id="_A(^XvKYTe$..pLar=4f" variabletype="">zakgeldSom</field>
+                                                                                                                      </block>
+                                                                                                                    </value>
+                                                                                                                    <value name="B">
+                                                                                                                      <block type="math_number" id="+gwQj6+A2^FphWqhms@$">
+                                                                                                                        <field name="NUM">1.5</field>
+                                                                                                                      </block>
+                                                                                                                    </value>
+                                                                                                                  </block>
+                                                                                                                </value>
+                                                                                                                <value name="decimal">
+                                                                                                                  <block type="math_number" id="|)3uL8ZWv`eg-V70*Vb;">
+                                                                                                                    <field name="NUM">2</field>
+                                                                                                                  </block>
+                                                                                                                </value>
+                                                                                                              </block>
+                                                                                                            </value>
+                                                                                                          </block>
+                                                                                                        </next>
+                                                                                                      </block>
+                                                                                                    </next>
+                                                                                                  </block>
+                                                                                                </next>
+                                                                                              </block>
+                                                                                            </next>
+                                                                                          </block>
+                                                                                        </next>
+                                                                                      </block>
+                                                                                    </statement>
+                                                                                  </block>
+                                                                                </statement>
+                                                                                <value name="CASECONDITION1">
+                                                                                  <block type="math_number" id="wp.1kfpf]}[Daxs+,+y-">
+                                                                                    <field name="NUM">2</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <statement name="CASE1">
+                                                                                  <block type="controls_for" id="Lfy?njUgiN(|9^,7e0H_">
+                                                                                    <field name="VAR" id="gibsHdEnKc?^2]B`((gP" variabletype="">teller</field>
+                                                                                    <value name="FROM">
+                                                                                      <block type="variables_get" id="eExO:HPzEBGu7_J[d4zt">
+                                                                                        <field name="VAR" id="m+Lf7[bacB);h^gn:J!," variabletype="">startLeeftijd</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                    <value name="TO">
+                                                                                      <block type="variables_get" id="HQ^?UGtrd7[c^+l5nPqt">
+                                                                                        <field name="VAR" id="sd/Ja[NlDsBiw8}$@T|0" variabletype="">leeftijd</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                    <value name="BY">
+                                                                                      <block type="math_number" id="ND2![}/tu2J?n?yMqbVm">
+                                                                                        <field name="NUM">1</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                    <statement name="DO">
+                                                                                      <block type="text_print_sameline" id="Ojb50yrU`Rp?0wHlMP1m">
+                                                                                        <value name="TEXT">
+                                                                                          <block type="text" id="7VTPDh3x%4DXtKW*vS0y">
+                                                                                            <field name="TEXT">Leeftijd </field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <next>
+                                                                                          <block type="text_print_sameline" id="LKvgb0SX1$tCf$O+PrgD">
+                                                                                            <value name="TEXT">
+                                                                                              <block type="variables_get" id="P~JwthZ2E1=YXn:oiB%=">
+                                                                                                <field name="VAR" id="gibsHdEnKc?^2]B`((gP" variabletype="">teller</field>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                            <next>
+                                                                                              <block type="text_print_sameline" id="~ZlOU%s1a(YAVB(CeLbN">
+                                                                                                <value name="TEXT">
+                                                                                                  <block type="text" id="}OD@C%tP*_M-{yRdY*)G">
+                                                                                                    <field name="TEXT">: </field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                                <next>
+                                                                                                  <block type="text_print_sameline" id="~wtg5*(94eQH%O.a3BB;">
+                                                                                                    <value name="TEXT">
+                                                                                                      <block type="variables_get" id="7$x$:.`C@+*cj01iM/f%">
+                                                                                                        <field name="VAR" id="_A(^XvKYTe$..pLar=4f" variabletype="">zakgeldSom</field>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                    <next>
+                                                                                                      <block type="text_print" id="Dbno8xrr2w,2@Ei~0T-y">
+                                                                                                        <value name="TEXT">
+                                                                                                          <block type="text" id="x,Wb|g{Tu,j7Y$t!Xj~+">
+                                                                                                            <field name="TEXT"> €</field>
+                                                                                                          </block>
+                                                                                                        </value>
+                                                                                                        <next>
+                                                                                                          <block type="variables_set" id="l^U}W4fa`A$Ev}/CH|:-">
+                                                                                                            <field name="VAR" id="_A(^XvKYTe$..pLar=4f" variabletype="">zakgeldSom</field>
+                                                                                                            <value name="VALUE">
+                                                                                                              <block type="math_arithmetic" id="#Ue!C+GQL:T6c-a^cJj4">
+                                                                                                                <field name="OP">ADD</field>
+                                                                                                                <value name="A">
+                                                                                                                  <block type="variables_get" id="j=oi[PrN.B,p`r}KOO3{">
+                                                                                                                    <field name="VAR" id="_A(^XvKYTe$..pLar=4f" variabletype="">zakgeldSom</field>
+                                                                                                                  </block>
+                                                                                                                </value>
+                                                                                                                <value name="B">
+                                                                                                                  <block type="math_number" id="}Cw@UpDzev$$ykz3cy/+">
+                                                                                                                    <field name="NUM">5</field>
+                                                                                                                  </block>
+                                                                                                                </value>
+                                                                                                              </block>
+                                                                                                            </value>
+                                                                                                          </block>
+                                                                                                        </next>
+                                                                                                      </block>
+                                                                                                    </next>
+                                                                                                  </block>
+                                                                                                </next>
+                                                                                              </block>
+                                                                                            </next>
+                                                                                          </block>
+                                                                                        </next>
+                                                                                      </block>
+                                                                                    </statement>
+                                                                                  </block>
+                                                                                </statement>
+                                                                                <value name="CASECONDITION2">
+                                                                                  <block type="math_number" id="8L15it-7?Ca^2`pjmKcX">
+                                                                                    <field name="NUM">3</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <statement name="CASE2">
+                                                                                  <block type="variables_set" id="kebS|tN#|1Jn6x3b#}h~">
+                                                                                    <field name="VAR" id="e:grWkmUC1CXZ]T50L~K" variabletype="">drieJaarlijks</field>
+                                                                                    <value name="VALUE">
+                                                                                      <block type="math_number" id="V0TNX%EfkZA;e%w29dQ?">
+                                                                                        <field name="NUM">0</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                    <next>
+                                                                                      <block type="controls_for" id="F|*$TyMW=m^V70l8^K:7">
+                                                                                        <field name="VAR" id="gibsHdEnKc?^2]B`((gP" variabletype="">teller</field>
+                                                                                        <value name="FROM">
+                                                                                          <block type="variables_get" id=",r||VoR12Xp2m:`183wp">
+                                                                                            <field name="VAR" id="m+Lf7[bacB);h^gn:J!," variabletype="">startLeeftijd</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <value name="TO">
+                                                                                          <block type="variables_get" id="J#j9mR[]@/I5_Xo$qmfw">
+                                                                                            <field name="VAR" id="sd/Ja[NlDsBiw8}$@T|0" variabletype="">leeftijd</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <value name="BY">
+                                                                                          <block type="math_number" id="EjNoxsRo}zD7;3Usz95T">
+                                                                                            <field name="NUM">1</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <statement name="DO">
+                                                                                          <block type="math_change" id="}01a7%4vUTo0O/cN,Xvp">
+                                                                                            <field name="VAR" id="e:grWkmUC1CXZ]T50L~K" variabletype="">drieJaarlijks</field>
+                                                                                            <value name="DELTA">
+                                                                                              <shadow type="math_number" id="bW60riwM@pE06xkI+XQX">
+                                                                                                <field name="NUM">1</field>
+                                                                                              </shadow>
+                                                                                            </value>
+                                                                                            <next>
+                                                                                              <block type="text_print_sameline" id="v7,ULJ[z1v[:TmtI/=G:">
+                                                                                                <value name="TEXT">
+                                                                                                  <block type="text" id="b_8by:!ll}f[sdup{e%S">
+                                                                                                    <field name="TEXT">Leeftijd </field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                                <next>
+                                                                                                  <block type="text_print_sameline" id="Lu:bGw^3Hb5(iSS;{-6K">
+                                                                                                    <value name="TEXT">
+                                                                                                      <block type="variables_get" id="BCl+(s@|uhm,TyL`LY[]">
+                                                                                                        <field name="VAR" id="gibsHdEnKc?^2]B`((gP" variabletype="">teller</field>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                    <next>
+                                                                                                      <block type="text_print_sameline" id="meD.QJA4!~BRbG+*F[}n">
+                                                                                                        <value name="TEXT">
+                                                                                                          <block type="text" id="Xnj@fOl`fVFogCRR/]$R">
+                                                                                                            <field name="TEXT">: </field>
+                                                                                                          </block>
+                                                                                                        </value>
+                                                                                                        <next>
+                                                                                                          <block type="text_print_sameline" id="11_+7Fn{jzDY25Q2W[?l">
+                                                                                                            <value name="TEXT">
+                                                                                                              <block type="variables_get" id="9=Q:d=*Moy`tV-/y8Xr0">
+                                                                                                                <field name="VAR" id="_A(^XvKYTe$..pLar=4f" variabletype="">zakgeldSom</field>
+                                                                                                              </block>
+                                                                                                            </value>
+                                                                                                            <next>
+                                                                                                              <block type="text_print" id="GdWA7,fhw#FL.hH~`BD^">
+                                                                                                                <value name="TEXT">
+                                                                                                                  <block type="text" id="zhc].]Jif=+;).q.*q,H">
+                                                                                                                    <field name="TEXT"> €</field>
+                                                                                                                  </block>
+                                                                                                                </value>
+                                                                                                                <next>
+                                                                                                                  <block type="controls_if" id="i@{Dzu@ywCoB~{uj4V.|">
+                                                                                                                    <value name="IF0">
+                                                                                                                      <block type="logic_compare" id="PnSC)Dhn~rX11?r%N~/a">
+                                                                                                                        <field name="OP">EQ</field>
+                                                                                                                        <value name="A">
+                                                                                                                          <block type="math_modulo" id="[0NwSqG;Hr^0yz6Bz:*Q">
+                                                                                                                            <value name="DIVIDEND">
+                                                                                                                              <block type="variables_get" id="e3K!fdoMw,s;@k2hhauR">
+                                                                                                                                <field name="VAR" id="e:grWkmUC1CXZ]T50L~K" variabletype="">drieJaarlijks</field>
+                                                                                                                              </block>
+                                                                                                                            </value>
+                                                                                                                            <value name="DIVISOR">
+                                                                                                                              <block type="math_number" id="kGWBgf*SMziy8Ble;bL(">
+                                                                                                                                <field name="NUM">3</field>
+                                                                                                                              </block>
+                                                                                                                            </value>
+                                                                                                                          </block>
+                                                                                                                        </value>
+                                                                                                                        <value name="B">
+                                                                                                                          <block type="math_number" id="~pkcGqz!Z:G5k}aj6phq">
+                                                                                                                            <field name="NUM">0</field>
+                                                                                                                          </block>
+                                                                                                                        </value>
+                                                                                                                      </block>
+                                                                                                                    </value>
+                                                                                                                    <statement name="DO0">
+                                                                                                                      <block type="variables_set" id=",lz!Mr)u_LT,].6s3D#5">
+                                                                                                                        <field name="VAR" id="_A(^XvKYTe$..pLar=4f" variabletype="">zakgeldSom</field>
+                                                                                                                        <value name="VALUE">
+                                                                                                                          <block type="math_arithmetic" id="6p{]R1o,`GtTmj@Fdo5w">
+                                                                                                                            <field name="OP">MULTIPLY</field>
+                                                                                                                            <value name="A">
+                                                                                                                              <block type="variables_get" id="KoNI9_ym}/PW*{rl?R5E">
+                                                                                                                                <field name="VAR" id="_A(^XvKYTe$..pLar=4f" variabletype="">zakgeldSom</field>
+                                                                                                                              </block>
+                                                                                                                            </value>
+                                                                                                                            <value name="B">
+                                                                                                                              <block type="math_number" id="]F|8/o/ZvqVCU~~DD{Lt">
+                                                                                                                                <field name="NUM">2</field>
+                                                                                                                              </block>
+                                                                                                                            </value>
+                                                                                                                          </block>
+                                                                                                                        </value>
+                                                                                                                      </block>
+                                                                                                                    </statement>
+                                                                                                                  </block>
+                                                                                                                </next>
+                                                                                                              </block>
+                                                                                                            </next>
+                                                                                                          </block>
+                                                                                                        </next>
+                                                                                                      </block>
+                                                                                                    </next>
+                                                                                                  </block>
+                                                                                                </next>
+                                                                                              </block>
+                                                                                            </next>
+                                                                                          </block>
+                                                                                        </statement>
+                                                                                      </block>
+                                                                                    </next>
+                                                                                  </block>
+                                                                                </statement>
+                                                                                <next>
+                                                                                  <block type="text_print" id="]gruAI_$_wzZ~=9=6#q3">
+                                                                                    <next>
+                                                                                      <block type="text_print" id="?wZ;{A#0:$.Z$HGb`3qJ">
+                                                                                        <value name="TEXT">
+                                                                                          <block type="text" id="5]/wpF;o)W[(FA3z;RWG">
+                                                                                            <field name="TEXT">1. Bereken met jaarlijkse verhoging van 50%</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <next>
+                                                                                          <block type="text_print" id="gT@uJ$#*i`1C7P%wH}4?">
+                                                                                            <value name="TEXT">
+                                                                                              <block type="text" id="0*3ore;b2=ZooN$z?YiT">
+                                                                                                <field name="TEXT">2. Bereken met jaarlijkse verhoging van 5 €</field>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                            <next>
+                                                                                              <block type="text_print" id="5jHaS9@r0bb-!C=wq-,M">
+                                                                                                <value name="TEXT">
+                                                                                                  <block type="text" id=",vy)r}Fx`?[uAe+5WW!S">
+                                                                                                    <field name="TEXT">3. Berekenen met 3 jaarlijkse verdubbeling</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                                <next>
+                                                                                                  <block type="variables_set" id="G-$rP6OH_Y{#XA_BwP-~">
+                                                                                                    <field name="VAR" id="EHBi).dk5`Ala@(Z}UPD" variabletype="">keuze</field>
+                                                                                                    <value name="VALUE">
+                                                                                                      <block type="declare_integer" id="_dF)u7p]fV}Z%O1;R~xE">
+                                                                                                        <value name="INTEGER_INPUT">
+                                                                                                          <block type="text_prompt_ext" id="BE,=6krwfH|GvzXt_18Y">
+                                                                                                            <mutation type="NUMBER"></mutation>
+                                                                                                            <field name="TYPE">NUMBER</field>
+                                                                                                            <value name="TEXT">
+                                                                                                              <block type="text" id="EI?gJib.IBS1YpjWxc5h">
+                                                                                                                <field name="TEXT">Verhogings methode (1,2,3; 0 om te stoppen)</field>
+                                                                                                              </block>
+                                                                                                            </value>
+                                                                                                          </block>
+                                                                                                        </value>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                    <next>
+                                                                                                      <block type="text_print" id="PX6c,qb[Wj|h;;mp52v("></block>
+                                                                                                    </next>
+                                                                                                  </block>
+                                                                                                </next>
+                                                                                              </block>
+                                                                                            </next>
+                                                                                          </block>
+                                                                                        </next>
+                                                                                      </block>
+                                                                                    </next>
+                                                                                  </block>
+                                                                                </next>
+                                                                              </block>
+                                                                            </next>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </statement>
+                                                                    <statement name="ELSE">
+                                                                      <block type="variables_set" id="CS({SqzAXF-O228CArZC">
+                                                                        <field name="VAR" id="EHBi).dk5`Ala@(Z}UPD" variabletype="">keuze</field>
+                                                                        <value name="VALUE">
+                                                                          <block type="declare_integer" id="?Riu}Y(w*=R8$+o|NHzj">
+                                                                            <value name="INTEGER_INPUT">
+                                                                              <block type="text_prompt_ext" id=".e9t/BXe4(E6@xm=P2,t">
+                                                                                <mutation type="NUMBER"></mutation>
+                                                                                <field name="TYPE">NUMBER</field>
+                                                                                <value name="TEXT">
+                                                                                  <block type="text" id="7WQXhh4wuH.AYs!f*df$">
+                                                                                    <field name="TEXT">Verhogings methode (1,2,3; 0 om te stoppen)</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                              </block>
+                                                                            </value>
+                                                                          </block>
+                                                                        </value>
+                                                                      </block>
+                                                                    </statement>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </statement>
+                                                            <next>
+                                                              <block type="text_print_sameline" id="m08Ex/N`vZ]p@QyMRt`o">
+                                                                <value name="TEXT">
+                                                                  <block type="text" id="HW%J;iQDu+vP@z?uxy|e">
+                                                                    <field name="TEXT">Keuze: </field>
+                                                                  </block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="text_print" id="~cL!L9{=YTe,H1z:uIh4">
+                                                                    <value name="TEXT">
+                                                                      <block type="variables_get" id="rBi`OGQldK2Q*jk3F`o=">
+                                                                        <field name="VAR" id="EHBi).dk5`Ala@(Z}UPD" variabletype="">keuze</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <next>
+                                                                      <block type="text_print" id="tfc0c.llNRDrX|f+O]ku">
+                                                                        <value name="TEXT">
+                                                                          <block type="text" id="o7Bg6{DkpG]P!k!0Me0{">
+                                                                            <field name="TEXT">Einde berekeningen</field>
+                                                                          </block>
+                                                                        </value>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

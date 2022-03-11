@@ -1,0 +1,75 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="$_@0_5KBBKX)f6{M8;_I">zijde</variable>
+  </variables>
+  <block type="variables_set" id="[%_ih}UKBZj7B!E65h7#" x="11" y="33">
+    <field name="VAR" id="$_@0_5KBBKX)f6{M8;_I" variabletype="">zijde</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="Vb8~#81buZcK95bss2t=">
+        <mutation type="NUMBER"></mutation>
+        <field name="TYPE">NUMBER</field>
+        <value name="TEXT">
+          <block type="text" id="Gk3(9ui*LK+hiRE.5S)4">
+            <field name="TEXT">Geef de zijde van een vierkant: </field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="text_print_sameline" id="}yJ.D3lB}U~3I51{O:^Y">
+        <value name="TEXT">
+          <block type="text" id="=58-o{ack-b!*NcS`f=3">
+            <field name="TEXT">Oppervlakte: </field>
+          </block>
+        </value>
+        <next>
+          <block type="text_print" id="/!Wm|BSa/`ykBzefCOjf">
+            <value name="TEXT">
+              <block type="math_arithmetic" id="C$#/^HDY@C.m.61`qin@">
+                <field name="OP">POWER</field>
+                <value name="A">
+                  <block type="variables_get" id="nMMynUFsCWhfVHh9/H7S">
+                    <field name="VAR" id="$_@0_5KBBKX)f6{M8;_I" variabletype="">zijde</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="p8/!-8Tglb~SrhsIA+XM">
+                    <field name="NUM">2</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="text_print_sameline" id="Osd034~a1w0Pnj88nPQ|">
+                <value name="TEXT">
+                  <block type="text" id="v5`6q}x4CStMjJInn0Py">
+                    <field name="TEXT">Omtrek: </field>
+                  </block>
+                </value>
+                <next>
+                  <block type="text_print" id="B3#Zwo#QsK0r(4o-3lB?">
+                    <value name="TEXT">
+                      <block type="math_arithmetic" id="w}e30z~luG[$O/L9=;}d">
+                        <field name="OP">MULTIPLY</field>
+                        <value name="A">
+                          <block type="variables_get" id=")K}p~`QnA}Tor#xF=P0E">
+                            <field name="VAR" id="$_@0_5KBBKX)f6{M8;_I" variabletype="">zijde</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="3d`-YP.~zTj-V~6Aj{#$">
+                            <field name="NUM">4</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

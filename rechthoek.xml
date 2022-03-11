@@ -1,0 +1,55 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="%ypv,zyo69+3B8/pAaTE">lengte</variable>
+    <variable type="" id="[GzH$WqW3L-4pHn=Xc2e">breedte</variable>
+  </variables>
+  <block type="variables_set" id="Q];eh%faRTqkzoD[41he" x="29" y="50">
+    <field name="VAR" id="%ypv,zyo69+3B8/pAaTE" variabletype="">lengte</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="IKh:vZjR^x]iV+P@^hi|">
+        <mutation type="NUMBER"></mutation>
+        <field name="TYPE">NUMBER</field>
+        <value name="TEXT">
+          <block type="text" id="isl,foLnisumxQVnU9YB">
+            <field name="TEXT">Lengte van de rechthoek:</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="9rHU*INKW?jne;tezdGJ">
+        <field name="VAR" id="[GzH$WqW3L-4pHn=Xc2e" variabletype="">breedte</field>
+        <value name="VALUE">
+          <block type="text_prompt_ext" id="EC00sU[7N]lxoFWgpAlc">
+            <mutation type="NUMBER"></mutation>
+            <field name="TYPE">NUMBER</field>
+            <value name="TEXT">
+              <block type="text" id="Mq=c%w:BKP5I)Dcg}w)0">
+                <field name="TEXT">Breedte van de rechthoek:</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="text_print" id="s(=C_h2R4`EEp:qua9tC">
+            <value name="TEXT">
+              <block type="math_arithmetic" id="P(YA75;/?{IKHZ+WIh[i">
+                <field name="OP">MULTIPLY</field>
+                <value name="A">
+                  <block type="variables_get" id="EkxpVyNJ;2Nn.*Nrz10B">
+                    <field name="VAR" id="%ypv,zyo69+3B8/pAaTE" variabletype="">lengte</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="variables_get" id="l_+`225Q1[lfoEQJh+Gv">
+                    <field name="VAR" id="[GzH$WqW3L-4pHn=Xc2e" variabletype="">breedte</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

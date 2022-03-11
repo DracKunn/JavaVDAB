@@ -1,0 +1,88 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="8U*hITk{Eki(Y+8{#%l.">opbrengst</variable>
+    <variable type="" id="Mpa|qaI(e7[BL%{JCleR">gestort</variable>
+  </variables>
+  <block type="variables_set" id="D/;#(Z(=1S^2I-U3Qbtc" x="12" y="81">
+    <field name="VAR" id="8U*hITk{Eki(Y+8{#%l." variabletype="">opbrengst</field>
+    <value name="VALUE">
+      <block type="math_number" id="QB^YFpRQ-]dR}%81?n:+">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="/:D$.7Vb0*W4Z3tkh%w=">
+        <field name="VAR" id="Mpa|qaI(e7[BL%{JCleR" variabletype="">gestort</field>
+        <value name="VALUE">
+          <block type="text_prompt_ext" id="u[P7S7`Xo[?k[uJF+/c;">
+            <mutation type="NUMBER"></mutation>
+            <field name="TYPE">NUMBER</field>
+            <value name="TEXT">
+              <block type="text" id="jxc2#E:r8TZ;c:_i*JgR">
+                <field name="TEXT">Gestort bedrag (0 om te stoppen):</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="controls_whileUntil" id="4y+J4E11_uK~^WU-P39X">
+            <field name="MODE">WHILE</field>
+            <value name="BOOL">
+              <block type="logic_compare" id="v3ufG{4Pc/2:y:QjxM2h">
+                <field name="OP">NEQ</field>
+                <value name="A">
+                  <block type="variables_get" id="#6?iR{O,En.;yMO=3Wgv">
+                    <field name="VAR" id="Mpa|qaI(e7[BL%{JCleR" variabletype="">gestort</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="~p)@}nEN77Y1u^9KwPvk">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="math_change" id="~$3$[a]HRqe:rJhN(-CA">
+                <field name="VAR" id="8U*hITk{Eki(Y+8{#%l." variabletype="">opbrengst</field>
+                <value name="DELTA">
+                  <shadow type="math_number" id="bE!x@G|7W.ne)2T(FGJW">
+                    <field name="NUM">1</field>
+                  </shadow>
+                  <block type="variables_get" id="WQjvsfu=g.s[Dw~tQz(f">
+                    <field name="VAR" id="Mpa|qaI(e7[BL%{JCleR" variabletype="">gestort</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="text_print" id="UepKRk@|vcAdXChw;x%Y">
+                    <value name="TEXT">
+                      <block type="variables_get" id="l:xTh6=YF$;JTe0KB-{[">
+                        <field name="VAR" id="8U*hITk{Eki(Y+8{#%l." variabletype="">opbrengst</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="variables_set" id="N[%fo$=^]m:AoKmM5#3J">
+                        <field name="VAR" id="Mpa|qaI(e7[BL%{JCleR" variabletype="">gestort</field>
+                        <value name="VALUE">
+                          <block type="text_prompt_ext" id="`t#zVl:`:?0T]GyI.o|1">
+                            <mutation type="NUMBER"></mutation>
+                            <field name="TYPE">NUMBER</field>
+                            <value name="TEXT">
+                              <block type="text" id="_dAYP;ti;kxiSugMpj2l">
+                                <field name="TEXT">Gestort bedrag (0 om te stoppen):</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

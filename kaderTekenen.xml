@@ -1,0 +1,187 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="g,P$_j^c*9Gsh8sVr#}O">lengte</variable>
+    <variable type="" id="eakI66]`Q_^9|j4gY](N">breedte</variable>
+    <variable type="" id="$^7vVLSm2#UUg88V+(~P">breedteTeller</variable>
+    <variable type="" id="E.,8anz~zC)dxp{6:9g%">lengteTeller</variable>
+  </variables>
+  <block type="variables_set" id="Hc2QhCR:JeYasgOWD0F/" x="24" y="10">
+    <field name="VAR" id="g,P$_j^c*9Gsh8sVr#}O" variabletype="">lengte</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="ETZWFpC}M%~-3vW}16xT">
+        <mutation type="NUMBER"></mutation>
+        <field name="TYPE">NUMBER</field>
+        <value name="TEXT">
+          <block type="text" id="ym35^lrX4cwtM!hNA$$0">
+            <field name="TEXT">Lengte:</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="S1R-P+APB(%f]CE,Zq@5">
+        <field name="VAR" id="eakI66]`Q_^9|j4gY](N" variabletype="">breedte</field>
+        <value name="VALUE">
+          <block type="text_prompt_ext" id="SYTtsOUT@tPi@LG6v=J[">
+            <mutation type="NUMBER"></mutation>
+            <field name="TYPE">NUMBER</field>
+            <value name="TEXT">
+              <block type="text" id="qClWVuOMA0%@_/o0Dx)S">
+                <field name="TEXT">Breedte:</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="controls_for" id="dzE2p8SFp60C51wZ(@BT">
+            <field name="VAR" id="E.,8anz~zC)dxp{6:9g%" variabletype="">lengteTeller</field>
+            <value name="FROM">
+              <block type="math_number" id="9,_:PdN)HJ8ZT7fLQ9jX">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+            <value name="TO">
+              <block type="variables_get" id="pTUg]?XaRB*~)57nlucZ">
+                <field name="VAR" id="g,P$_j^c*9Gsh8sVr#}O" variabletype="">lengte</field>
+              </block>
+            </value>
+            <value name="BY">
+              <block type="math_number" id="E]A{{g[z)},fO3zU1Yj0">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="text_print_sameline" id="MVqr1J}x8[slU8GDj[)p">
+                <value name="TEXT">
+                  <block type="text" id="+!^O:RaT-7REn}V8[LDS">
+                    <field name="TEXT">.</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <next>
+              <block type="text_print" id="{B]~#vFkyF*mCp)Pl*5w">
+                <next>
+                  <block type="controls_for" id="8a$^V-EI?aD(VVKC@a!{">
+                    <field name="VAR" id="$^7vVLSm2#UUg88V+(~P" variabletype="">breedteTeller</field>
+                    <value name="FROM">
+                      <block type="math_number" id="Nd2}e4I::nV09OUn_40M">
+                        <field name="NUM">1</field>
+                      </block>
+                    </value>
+                    <value name="TO">
+                      <block type="math_arithmetic" id="Tgwp24MU4L(3`o-OrI}2">
+                        <field name="OP">MINUS</field>
+                        <value name="A">
+                          <block type="variables_get" id="(hfq`AT4U5;W#]jnk|S8">
+                            <field name="VAR" id="eakI66]`Q_^9|j4gY](N" variabletype="">breedte</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="cS.TN7hr/DZfS|Y}d|(@">
+                            <field name="NUM">2</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="BY">
+                      <block type="math_number" id="lMUB}W}j)(7tC=+$_s{7">
+                        <field name="NUM">1</field>
+                      </block>
+                    </value>
+                    <statement name="DO">
+                      <block type="text_print_sameline" id=")?h.TU[PZ64d5ql98rd$">
+                        <value name="TEXT">
+                          <block type="text" id="7[[fPg%ai%MH32Ln)02/">
+                            <field name="TEXT">.</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="controls_for" id="ez7^M]5P{O9En.w+r=pt">
+                            <field name="VAR" id="E.,8anz~zC)dxp{6:9g%" variabletype="">lengteTeller</field>
+                            <value name="FROM">
+                              <block type="math_number" id="AtzC`Qx!eFIprvdIb@7r">
+                                <field name="NUM">1</field>
+                              </block>
+                            </value>
+                            <value name="TO">
+                              <block type="math_arithmetic" id="Xy*9x0nvCoO6D?M8`7if">
+                                <field name="OP">MINUS</field>
+                                <value name="A">
+                                  <block type="variables_get" id="EPc=6Rp=TXpYf(,A,X{c">
+                                    <field name="VAR" id="g,P$_j^c*9Gsh8sVr#}O" variabletype="">lengte</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="math_number" id="+f().{FZ6=q_lD?$m|L.">
+                                    <field name="NUM">2</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="BY">
+                              <block type="math_number" id="b~[OcQ]NHds(7=yox@y/">
+                                <field name="NUM">1</field>
+                              </block>
+                            </value>
+                            <statement name="DO">
+                              <block type="text_print_sameline" id="3/(CJJv$%a;my#piI*@l">
+                                <value name="TEXT">
+                                  <block type="text" id="jN/WPWcCMj}e7:n?3=-w">
+                                    <field name="TEXT"> </field>
+                                  </block>
+                                </value>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="text_print" id="sH@JiM`$AkY2}fO**m|}">
+                                <value name="TEXT">
+                                  <block type="text" id="8658De1Qpw*VL]zju_I(">
+                                    <field name="TEXT">.</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="controls_for" id="*oSF)gxf=p35mb9b=+`S">
+                        <field name="VAR" id="E.,8anz~zC)dxp{6:9g%" variabletype="">lengteTeller</field>
+                        <value name="FROM">
+                          <block type="math_number" id="GO2*ZwI4`N#jD(am+n+%">
+                            <field name="NUM">1</field>
+                          </block>
+                        </value>
+                        <value name="TO">
+                          <block type="variables_get" id="]r`K!VgCDZ573WjX#2S^">
+                            <field name="VAR" id="g,P$_j^c*9Gsh8sVr#}O" variabletype="">lengte</field>
+                          </block>
+                        </value>
+                        <value name="BY">
+                          <block type="math_number" id="CFD+UwKcNcD|CYnUno[z">
+                            <field name="NUM">1</field>
+                          </block>
+                        </value>
+                        <statement name="DO">
+                          <block type="text_print_sameline" id="FdE%M_*~QP:ne=x3i$jO">
+                            <value name="TEXT">
+                              <block type="text" id="`QLY-X4o00#Dv@TS0LvG">
+                                <field name="TEXT">.</field>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

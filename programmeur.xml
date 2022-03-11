@@ -1,0 +1,28 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables></variables>
+  <block type="text_print" id="#V|0kr`uCnaYi!07dEwP" x="49" y="106">
+    <value name="TEXT">
+      <block type="text" id="w+R]js5{EQTQLt70pJM9">
+        <field name="TEXT">Ik</field>
+      </block>
+    </value>
+    <next>
+      <block type="text_print" id="0`xPI5])]y|`Z9BuoUo`">
+        <value name="TEXT">
+          <block type="text" id="T)sCSZI2KTEcYOh6BBOF">
+            <field name="TEXT">word</field>
+          </block>
+        </value>
+        <next>
+          <block type="text_print" id="_%oB{wE5`#~yO@qt3z?6">
+            <value name="TEXT">
+              <block type="text" id="dXl#jYEW/(JjO)Q*-ZlR">
+                <field name="TEXT">programmeur</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

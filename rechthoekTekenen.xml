@@ -1,0 +1,90 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="g,P$_j^c*9Gsh8sVr#}O">lengte</variable>
+    <variable type="" id="eakI66]`Q_^9|j4gY](N">breedte</variable>
+    <variable type="" id="$^7vVLSm2#UUg88V+(~P">i</variable>
+    <variable type="" id="E.,8anz~zC)dxp{6:9g%">j</variable>
+  </variables>
+  <block type="variables_set" id="Hc2QhCR:JeYasgOWD0F/" x="24" y="10">
+    <field name="VAR" id="g,P$_j^c*9Gsh8sVr#}O" variabletype="">lengte</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="ETZWFpC}M%~-3vW}16xT">
+        <mutation type="NUMBER"></mutation>
+        <field name="TYPE">NUMBER</field>
+        <value name="TEXT">
+          <block type="text" id="ym35^lrX4cwtM!hNA$$0">
+            <field name="TEXT">Lengte:</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="S1R-P+APB(%f]CE,Zq@5">
+        <field name="VAR" id="eakI66]`Q_^9|j4gY](N" variabletype="">breedte</field>
+        <value name="VALUE">
+          <block type="text_prompt_ext" id="SYTtsOUT@tPi@LG6v=J[">
+            <mutation type="NUMBER"></mutation>
+            <field name="TYPE">NUMBER</field>
+            <value name="TEXT">
+              <block type="text" id="qClWVuOMA0%@_/o0Dx)S">
+                <field name="TEXT">Breedte:</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="controls_for" id="8a$^V-EI?aD(VVKC@a!{">
+            <field name="VAR" id="$^7vVLSm2#UUg88V+(~P" variabletype="">i</field>
+            <value name="FROM">
+              <block type="math_number" id="Nd2}e4I::nV09OUn_40M">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+            <value name="TO">
+              <block type="variables_get" id="(hfq`AT4U5;W#]jnk|S8">
+                <field name="VAR" id="eakI66]`Q_^9|j4gY](N" variabletype="">breedte</field>
+              </block>
+            </value>
+            <value name="BY">
+              <block type="math_number" id="lMUB}W}j)(7tC=+$_s{7">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="controls_for" id="ez7^M]5P{O9En.w+r=pt">
+                <field name="VAR" id="E.,8anz~zC)dxp{6:9g%" variabletype="">j</field>
+                <value name="FROM">
+                  <block type="math_number" id="AtzC`Qx!eFIprvdIb@7r">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+                <value name="TO">
+                  <block type="variables_get" id="]g+|$=nU`qz6/nq8zX0Q">
+                    <field name="VAR" id="g,P$_j^c*9Gsh8sVr#}O" variabletype="">lengte</field>
+                  </block>
+                </value>
+                <value name="BY">
+                  <block type="math_number" id="b~[OcQ]NHds(7=yox@y/">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+                <statement name="DO">
+                  <block type="text_print_sameline" id="3/(CJJv$%a;my#piI*@l">
+                    <value name="TEXT">
+                      <block type="text" id="jN/WPWcCMj}e7:n?3=-w">
+                        <field name="TEXT">*</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <next>
+                  <block type="text_print" id="sH@JiM`$AkY2}fO**m|}"></block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

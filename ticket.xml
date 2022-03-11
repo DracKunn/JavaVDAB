@@ -1,0 +1,58 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="J,1lvzf]9h@A2l]m~wgM">prijs</variable>
+    <variable type="" id="+E~s)gdk7bKJ60|wG5*.">vip</variable>
+  </variables>
+  <block type="variables_set" id="Fs@^a2UoCSZIB3ti[K89" x="13" y="46">
+    <field name="VAR" id="J,1lvzf]9h@A2l]m~wgM" variabletype="">prijs</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="X-;Y/un5@3lAH0+pCV]W">
+        <mutation type="NUMBER"></mutation>
+        <field name="TYPE">NUMBER</field>
+        <value name="TEXT">
+          <block type="text" id="ar-NojULlOYe]tS/$xv7">
+            <field name="TEXT">Geef de prijs in:</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="Cir-vE?(bd_]s#m:PqEU">
+        <field name="VAR" id="+E~s)gdk7bKJ60|wG5*." variabletype="">vip</field>
+        <value name="VALUE">
+          <block type="text_prompt_ext" id="c}:{qqK@L4flYB},LF/*">
+            <mutation type="NUMBER"></mutation>
+            <field name="TYPE">NUMBER</field>
+            <value name="TEXT">
+              <block type="text" id="bP/8{1azWlXG4lOriwYc">
+                <field name="TEXT">Geef de VIP prijs in:</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="math_change" id="RT!^}?/9jec~i?;HKR/K">
+            <field name="VAR" id="J,1lvzf]9h@A2l]m~wgM" variabletype="">prijs</field>
+            <value name="DELTA">
+              <shadow type="math_number" id="ZS2HUI$m0bPt_{,iv.VU">
+                <field name="NUM">1</field>
+              </shadow>
+              <block type="variables_get" id="xZ%T=dJY,Ms6Bfbj)+D+">
+                <field name="VAR" id="+E~s)gdk7bKJ60|wG5*." variabletype="">vip</field>
+              </block>
+            </value>
+            <next>
+              <block type="text_print" id="6^+KgC1oE=z,?w5=kFu-">
+                <value name="TEXT">
+                  <block type="variables_get" id="wcm4`Kd2CYAIq!kv/N`}">
+                    <field name="VAR" id="J,1lvzf]9h@A2l]m~wgM" variabletype="">prijs</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

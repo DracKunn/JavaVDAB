@@ -1,0 +1,102 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="-idDsp5NnvEKNO.prqd*">lengte</variable>
+    <variable type="" id="bnro0zsMU]=,-i/|VNu?">breedte</variable>
+    <variable type="" id="UH?fiw4_$kYy=d(A--jT">hoogte</variable>
+  </variables>
+  <block type="variables_set" id="bUmow)vHwmI3zwKlV:+{" x="11" y="36">
+    <field name="VAR" id="-idDsp5NnvEKNO.prqd*" variabletype="">lengte</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="8*O2fWJEH`q,*||L=8s0">
+        <mutation type="NUMBER"></mutation>
+        <field name="TYPE">NUMBER</field>
+        <value name="TEXT">
+          <block type="text" id="wvbECKY)Re[wsmD?@{|2">
+            <field name="TEXT">Geef de lengte van de balk:</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="F#w_C`;9)UdWhDsoRdf4">
+        <field name="VAR" id="bnro0zsMU]=,-i/|VNu?" variabletype="">breedte</field>
+        <value name="VALUE">
+          <block type="text_prompt_ext" id="2PpEt%,4nsB;noe3[8rc">
+            <mutation type="NUMBER"></mutation>
+            <field name="TYPE">NUMBER</field>
+            <value name="TEXT">
+              <block type="text" id="KdXP`qi-Y8hF-^j|R7c~">
+                <field name="TEXT">Geef de breedte van de balk:</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="GQ|;8;I;RK*T4/(:gJa*">
+            <field name="VAR" id="UH?fiw4_$kYy=d(A--jT" variabletype="">hoogte</field>
+            <value name="VALUE">
+              <block type="text_prompt_ext" id="ZvEW(ocK!70/gU$nD_D,">
+                <mutation type="NUMBER"></mutation>
+                <field name="TYPE">NUMBER</field>
+                <value name="TEXT">
+                  <block type="text" id="vUd:`TiY!w{xOQ$2|qYm">
+                    <field name="TEXT">Geef de hoogte van de balk:</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="text_print" id="@Iwv-qcY|bwT@J2*=aTY">
+                <value name="TEXT">
+                  <block type="math_arithmetic" id="H/%H)Bm@MuDxc_$p03D5">
+                    <field name="OP">DIVIDE</field>
+                    <value name="A">
+                      <block type="math_arithmetic" id="4G?-+U1hwW99/p{+K,zG">
+                        <field name="OP">MULTIPLY</field>
+                        <value name="A">
+                          <block type="math_number" id="+x)L[^I+EpX2v{,!weuL">
+                            <field name="NUM">19</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_arithmetic" id="7G2=xP7qT$4uQzlwJ5;n">
+                            <field name="OP">MULTIPLY</field>
+                            <value name="A">
+                              <block type="variables_get" id="G%:z~Sc=xVG2N+tzXZx)">
+                                <field name="VAR" id="bnro0zsMU]=,-i/|VNu?" variabletype="">breedte</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_arithmetic" id="~em(j8o)`GXEDCrTKI17">
+                                <field name="OP">POWER</field>
+                                <value name="A">
+                                  <block type="variables_get" id="TL!I@-8s3iRaO$NZ@b4I">
+                                    <field name="VAR" id="UH?fiw4_$kYy=d(A--jT" variabletype="">hoogte</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="math_number" id="bdD?c`Lx$ad[Z]CIiM!1">
+                                    <field name="NUM">2</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="variables_get" id="y3u@YUOq*iEbpC`.oOk`">
+                        <field name="VAR" id="-idDsp5NnvEKNO.prqd*" variabletype="">lengte</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

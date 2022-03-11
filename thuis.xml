@@ -1,0 +1,76 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="5eY4mAVo;(v@+CwOS8wG">temperatuur</variable>
+  </variables>
+  <block type="variables_set" id="VS9h7KZZC2eI|3y1+V+f" x="16" y="32">
+    <field name="VAR" id="5eY4mAVo;(v@+CwOS8wG" variabletype="">temperatuur</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="U{R~hnIlHaI#vLA*hxql">
+        <mutation type="NUMBER"></mutation>
+        <field name="TYPE">NUMBER</field>
+        <value name="TEXT">
+          <block type="text" id="hMv7,?kh|ixR3(PcG,=P">
+            <field name="TEXT">Temperatuur: </field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="controls_if" id="*(U4`gtEt4-gc-na|nje">
+        <value name="IF0">
+          <block type="logic_compare" id="w!j^^4q~Tfu_1i)H#rbU">
+            <field name="OP">LTE</field>
+            <value name="A">
+              <block type="variables_get" id="Rk37,NQ6{C=}j}r-/o:u">
+                <field name="VAR" id="5eY4mAVo;(v@+CwOS8wG" variabletype="">temperatuur</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="+1,Um)S$iK)l~YiXmbf_">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="controls_if" id="Lkv(oK1.R%UR[,G@-2?N">
+            <mutation else="1"></mutation>
+            <value name="IF0">
+              <block type="logic_compare" id="m79~q])uaUJ8dMnOCr@l">
+                <field name="OP">LT</field>
+                <value name="A">
+                  <block type="variables_get" id="Q8~M8hKXla71sJHU:Ecy">
+                    <field name="VAR" id="5eY4mAVo;(v@+CwOS8wG" variabletype="">temperatuur</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="8.z{{KnV-K_c%q?qi;UY">
+                    <field name="NUM">-40</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="text_print" id="D.UkT0=(nf10*~#;=qkY">
+                <value name="TEXT">
+                  <block type="text" id="-);6^2jj0G(Boksf)ew3">
+                    <field name="TEXT">Blijf thuis.</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="text_print" id="peS9~7{/Mu)EF_8upX6w">
+                <value name="TEXT">
+                  <block type="text" id="qC,Ft|_30.i%5COU.=5Y">
+                    <field name="TEXT">Doe een dikke jas aan.</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

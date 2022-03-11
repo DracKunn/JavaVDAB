@@ -1,0 +1,20 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables></variables>
+  <block type="text_print" id="xIm%#Q$C.,;@Kf1i8jZ]" x="16" y="47">
+    <value name="TEXT">
+      <block type="logic_compare" id="(C+fn.X?HZ_Lt.v(x;ST">
+        <field name="OP">LTE</field>
+        <value name="A">
+          <block type="math_number" id="Dx0JWJbi1l4XkCHiKQ/b">
+            <field name="NUM">4.6</field>
+          </block>
+        </value>
+        <value name="B">
+          <block type="math_number" id="R#md-EI|ND=W}AIOJaQ,">
+            <field name="NUM">5</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+</xml>

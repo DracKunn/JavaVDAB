@@ -1,0 +1,102 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="*x;Du]E+sC+l1,t2scRL">voornaam</variable>
+    <variable type="" id="w{5h|Z8Au%MN+gLIpO#Z">aantalKinderen</variable>
+    <variable type="" id="Tdrid*r89P-[j@6FC:_X">gehuwd</variable>
+  </variables>
+  <block type="variables_set" id="Ee[sVl:%?=^ZajkPGv]m" x="30" y="79">
+    <field name="VAR" id="*x;Du]E+sC+l1,t2scRL" variabletype="">voornaam</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="1W[:,pd-=P`fs[1$*aMt">
+        <mutation type="TEXT"></mutation>
+        <field name="TYPE">TEXT</field>
+        <value name="TEXT">
+          <block type="text" id="-Ayv-z^1fft/q,Y]Z`-a">
+            <field name="TEXT">Voornaam:</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="X9:5saoiay5[5Yb}|$wl">
+        <field name="VAR" id="w{5h|Z8Au%MN+gLIpO#Z" variabletype="">aantalKinderen</field>
+        <value name="VALUE">
+          <block type="text_prompt_ext" id="ww$j7D5F9x+f$6Oyr},]">
+            <mutation type="NUMBER"></mutation>
+            <field name="TYPE">NUMBER</field>
+            <value name="TEXT">
+              <block type="text" id="sV)BrCyEJr%FpA{4AhC#">
+                <field name="TEXT">Aantal kinderen:</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="LO;S%e2m^`@P~]?j*7KF">
+            <field name="VAR" id="Tdrid*r89P-[j@6FC:_X" variabletype="">gehuwd</field>
+            <value name="VALUE">
+              <block type="logic_boolean" id="ZX8gBh)#u)5+UFW_fUwL">
+                <field name="BOOL">TRUE</field>
+              </block>
+            </value>
+            <next>
+              <block type="text_print" id="v}?x-l}7/].pAYGiBL(X">
+                <value name="TEXT">
+                  <block type="variables_get" id="3;CPjT7$HF!|nWGHK@XD">
+                    <field name="VAR" id="*x;Du]E+sC+l1,t2scRL" variabletype="">voornaam</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="text_print" id="2RqRn6CJ[aY#pxyx5,J^">
+                    <value name="TEXT">
+                      <block type="variables_get" id="vgr1tZF%)15a^eNvD.Zy">
+                        <field name="VAR" id="w{5h|Z8Au%MN+gLIpO#Z" variabletype="">aantalKinderen</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="text_print" id="]1JKA#Lr`Tf-,*j*Ts%%">
+                        <value name="TEXT">
+                          <block type="variables_get" id="o!kGi;M|8K1d4K)#pVZ)">
+                            <field name="VAR" id="Tdrid*r89P-[j@6FC:_X" variabletype="">gehuwd</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="text_print" id="yb{:@z7yL+9-XlHQ}A1o">
+                            <value name="TEXT">
+                              <block type="variables_get" id="5KQ[#=1;l#7E0FtJF{-M">
+                                <field name="VAR" id="w{5h|Z8Au%MN+gLIpO#Z" variabletype="">aantalKinderen</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="text_print" id="c7VM_^d+3bN;DNW+O_}Y">
+                                <value name="TEXT">
+                                  <block type="math_arithmetic" id="76;fJ4{E7,]`Mxv_{_,.">
+                                    <field name="OP">MULTIPLY</field>
+                                    <value name="A">
+                                      <block type="variables_get" id="5I9S?#H2+n6T??Csq(JL">
+                                        <field name="VAR" id="w{5h|Z8Au%MN+gLIpO#Z" variabletype="">aantalKinderen</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="math_number" id="L7;PW,]~bg,ILPVpe!de">
+                                        <field name="NUM">300</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

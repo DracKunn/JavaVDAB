@@ -1,0 +1,103 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="/Al3V*oYV}FtP%Ch_BjG">werk</variable>
+    <variable type="" id="ya/?kSWx:v^m1/^,?HA6">opleiding</variable>
+  </variables>
+  <block type="variables_set" id="TD#+ORGCIlqLKR`~^YOW" x="35" y="38">
+    <field name="VAR" id="/Al3V*oYV}FtP%Ch_BjG" variabletype="">werk</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="Zqc;FHcT95Mvt:jEIA0R">
+        <mutation type="TEXT"></mutation>
+        <field name="TYPE">TEXT</field>
+        <value name="TEXT">
+          <block type="text" id="9[$FusXibzjhX9`(D84E">
+            <field name="TEXT">Heb je werk (ja/nee)?</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="controls_if" id="f}.w+5:Kv82M1qZ=}#wI">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="2[=ZhRE9JKTB!6Y$MSnM">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="5j*g#O6gb@7uSUE9X`:(">
+                <field name="VAR" id="/Al3V*oYV}FtP%Ch_BjG" variabletype="">werk</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="U;}5OjC^v}%z;/o(d*%Y">
+                <field name="TEXT">ja</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="text_print" id="fNytPh:gWcl5:#.)pKL:">
+            <value name="TEXT">
+              <block type="text" id="4)x1E#p}!2Ldt^WcP7=(">
+                <field name="TEXT">Veel werkplezier.</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="variables_set" id="H^F7;]_!MvC~k*(/[,is">
+            <field name="VAR" id="ya/?kSWx:v^m1/^,?HA6" variabletype="">opleiding</field>
+            <value name="VALUE">
+              <block type="text_prompt_ext" id="R@M:ti|@IErL|91HSOzZ">
+                <mutation type="TEXT"></mutation>
+                <field name="TYPE">TEXT</field>
+                <value name="TEXT">
+                  <block type="text" id="KuXt_0VDjk9iFeMddp4s">
+                    <field name="TEXT">Wil je een opleiding volgen (ja/nee)?</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="controls_if" id="80,j28g.-BquW+tTy(ph">
+                <mutation else="1"></mutation>
+                <value name="IF0">
+                  <block type="logic_compare" id="Dq2#[q$dG,Y:SL|R/`M%">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="variables_get" id="d23:ut;l6Me83H]WlvXf">
+                        <field name="VAR" id="ya/?kSWx:v^m1/^,?HA6" variabletype="">opleiding</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="text" id="|UpIMqv)Q*J2(T!0q/r3">
+                        <field name="TEXT">ja</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="text_print" id="99/sZ(_3FUKq+qm(}#[B">
+                    <value name="TEXT">
+                      <block type="text" id="0N/BzzutC#4wnMDF15(,">
+                        <field name="TEXT">Je vindt opleidingen op www.vdab.be/opleidingen.</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <statement name="ELSE">
+                  <block type="text_print" id="X`kFY83uEWN}.l(0VZq-">
+                    <value name="TEXT">
+                      <block type="text" id="nidH+MI9i?bo%!jI**ye">
+                        <field name="TEXT">Je vindt vacatures op www.vdab.be/jobs.</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

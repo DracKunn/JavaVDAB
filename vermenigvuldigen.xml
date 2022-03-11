@@ -1,0 +1,20 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables></variables>
+  <block type="text_print" id="{s-75QzXYy.1FO^b/nA|" x="64" y="68">
+    <value name="TEXT">
+      <block type="math_arithmetic" id="^{Sco_zkyMNIoVNu9K{R">
+        <field name="OP">MULTIPLY</field>
+        <value name="A">
+          <block type="math_number" id="VQ%8HU2Rpkji-2i7ls%M">
+            <field name="NUM">3</field>
+          </block>
+        </value>
+        <value name="B">
+          <block type="math_number" id=".^Q~ays}_,C%.%h!/xB?">
+            <field name="NUM">4</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+</xml>

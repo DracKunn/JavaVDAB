@@ -1,0 +1,93 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="a!$gW4b2)kQc9Ok-$JTB">mijnLengte</variable>
+    <variable type="" id="J3i1++N_zcgl#+CY.#A)">lengteMama</variable>
+  </variables>
+  <block type="text_print" id="|:4%*LsGsP:Y_|6h2B4p" x="14" y="53">
+    <value name="TEXT">
+      <block type="logic_compare" id="K(,x6,*Nwma:RAGRjRb/">
+        <field name="OP">LT</field>
+        <value name="A">
+          <block type="math_number" id="+CX.tnUOY86[-Hkeb{}a">
+            <field name="NUM">5</field>
+          </block>
+        </value>
+        <value name="B">
+          <block type="math_number" id="G8e|4xt8yY4ueuW_q*tJ">
+            <field name="NUM">3</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="Rt[?duhycE,baF5R)+e=">
+        <field name="VAR" id="a!$gW4b2)kQc9Ok-$JTB" variabletype="">mijnLengte</field>
+        <value name="VALUE">
+          <block type="text_prompt_ext" id="[[t4x+.S!rNZDZa%P,bO">
+            <mutation type="TEXT"></mutation>
+            <field name="TYPE">TEXT</field>
+            <value name="TEXT">
+              <block type="text" id="OPbQ7+IE+([t`=|jT7l[">
+                <field name="TEXT">Mijn lengte:</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="%!}5_t)we2r0-1pNy)^`">
+            <field name="VAR" id="J3i1++N_zcgl#+CY.#A)" variabletype="">lengteMama</field>
+            <value name="VALUE">
+              <block type="text_prompt_ext" id="MFNZZB?3.2xm=,:1#!*1">
+                <mutation type="TEXT"></mutation>
+                <field name="TYPE">TEXT</field>
+                <value name="TEXT">
+                  <block type="text" id="}nEdL=df6QPK+:#99#Yg">
+                    <field name="TEXT">Lengte mama:</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="text_print" id="g#Fxs%LFc2/;/FA)rOF[">
+                <value name="TEXT">
+                  <block type="logic_compare" id="ko`olr_{(#^,%,S/!k`e">
+                    <field name="OP">GT</field>
+                    <value name="A">
+                      <block type="variables_get" id="Qq}!gT[+_7=+Dlf0tq0j">
+                        <field name="VAR" id="a!$gW4b2)kQc9Ok-$JTB" variabletype="">mijnLengte</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="variables_get" id="6dW6D)P_q_^p6h`yi]yr">
+                        <field name="VAR" id="J3i1++N_zcgl#+CY.#A)" variabletype="">lengteMama</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="text_print" id="oeV9.YT*qq520P*gT*o8">
+                    <value name="TEXT">
+                      <block type="logic_compare" id="LLV?5*uCMx/J@j~agsb`">
+                        <field name="OP">LT</field>
+                        <value name="A">
+                          <block type="text" id="M#LP3Dc^)Y|`-MYk~S9[">
+                            <field name="TEXT">limonade</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="text" id="%4*h?dFu`WXK:(7]Vcu*">
+                            <field name="TEXT">bier</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

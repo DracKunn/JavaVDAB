@@ -1,0 +1,95 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="{Py]K;%#+A5p}e;p0g%c">getal</variable>
+    <variable type="" id="YA(mQ+{j_rZJmLwTB)@N">i</variable>
+  </variables>
+  <block type="variables_set" id="wqXx5$OAS1ou`{wMS8YM" x="21" y="49">
+    <field name="VAR" id="{Py]K;%#+A5p}e;p0g%c" variabletype="">getal</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="w$eX+AG[mlH~P3jgM)SU">
+        <mutation type="NUMBER"></mutation>
+        <field name="TYPE">NUMBER</field>
+        <value name="TEXT">
+          <block type="text" id="PECd^oqNner0mso+MUG]">
+            <field name="TEXT">Getal:</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="controls_for" id="9=^l31Z680[7wD8DivGE">
+        <field name="VAR" id="YA(mQ+{j_rZJmLwTB)@N" variabletype="">i</field>
+        <value name="FROM">
+          <block type="math_number" id="t/T;Uwv8EJ^Hy4dzC:SD">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <value name="TO">
+          <block type="math_number" id="(:lt/0}4o7yR1,PBrBbk">
+            <field name="NUM">10</field>
+          </block>
+        </value>
+        <value name="BY">
+          <block type="math_number" id="{/MrP}^vu}OE@l;d(/sD">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="text_print_sameline" id="QK6EKl?gbWL)Gy86lamh">
+            <value name="TEXT">
+              <block type="variables_get" id="|r)k(%tF8dg4Y@sJ-j-o">
+                <field name="VAR" id="YA(mQ+{j_rZJmLwTB)@N" variabletype="">i</field>
+              </block>
+            </value>
+            <next>
+              <block type="text_print_sameline" id="M}S3#jdF:35J1UPvxP*{">
+                <value name="TEXT">
+                  <block type="text" id="dWYPdIMMC+1-{@IitEi2">
+                    <field name="TEXT"> x </field>
+                  </block>
+                </value>
+                <next>
+                  <block type="text_print_sameline" id="PikYA4{kbB=hO;o`/XPW">
+                    <value name="TEXT">
+                      <block type="variables_get" id="M*x$d+T~bwfO68]2(t-?">
+                        <field name="VAR" id="{Py]K;%#+A5p}e;p0g%c" variabletype="">getal</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="text_print_sameline" id="(+~rEH|K93YluMHUR439">
+                        <value name="TEXT">
+                          <block type="text" id="Q@),=WrLYRh$:Ib=Hfz3">
+                            <field name="TEXT"> = </field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="text_print" id="3R=kfXiTxcrMElN6fkba">
+                            <value name="TEXT">
+                              <block type="math_arithmetic" id="4LgB`kGWiU]C{/MPNUD=">
+                                <field name="OP">MULTIPLY</field>
+                                <value name="A">
+                                  <block type="variables_get" id="YkrwBcf*;w./uRK)vD~(">
+                                    <field name="VAR" id="{Py]K;%#+A5p}e;p0g%c" variabletype="">getal</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="variables_get" id="IFO3*saPTCA2lQ.*V7;+">
+                                    <field name="VAR" id="YA(mQ+{j_rZJmLwTB)@N" variabletype="">i</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

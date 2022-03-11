@@ -1,0 +1,181 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="}OOyux@$_mdW{njaWlMO">centimeters</variable>
+    <variable type="" id="-RLv._Y|OMUGc+WJCLnN">keuze</variable>
+  </variables>
+  <block type="variables_set" id="[7!=DH+yw~dl[wBHXq3x" x="24" y="37">
+    <field name="VAR" id="}OOyux@$_mdW{njaWlMO" variabletype="">centimeters</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="ny;3f9mENi|!TPb+C+=o">
+        <mutation type="NUMBER"></mutation>
+        <field name="TYPE">NUMBER</field>
+        <value name="TEXT">
+          <block type="text" id="sE!^B=sE7j(nyj)W1wNM">
+            <field name="TEXT">Afstand in cm:</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="text_print" id="`G%7n}6EB^-~Nb6)L,zi">
+        <value name="TEXT">
+          <block type="text" id="AVMqnrUMq4:)u1?+oA^*">
+            <field name="TEXT">1. Naar meters</field>
+          </block>
+        </value>
+        <next>
+          <block type="text_print" id="c0`pZx7PW+{Qob{sUvPF">
+            <value name="TEXT">
+              <block type="text" id="};aFezFXL_K[}f;CMd[|">
+                <field name="TEXT">2. Naar inches</field>
+              </block>
+            </value>
+            <next>
+              <block type="text_print" id="83V[QCw@dLDHbw(-;6+7">
+                <value name="TEXT">
+                  <block type="text" id="~d{sr3^8#YoERAw/PF%_">
+                    <field name="TEXT">3. Naar feet</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="variables_set" id="H;.-.vOG_k}Xj0NY++1g">
+                    <field name="VAR" id="-RLv._Y|OMUGc+WJCLnN" variabletype="">keuze</field>
+                    <value name="VALUE">
+                      <block type="text_prompt_ext" id="e$D~I:FC#~025=Un8Y}u">
+                        <mutation type="NUMBER"></mutation>
+                        <field name="TYPE">NUMBER</field>
+                        <value name="TEXT">
+                          <block type="text" id="%9!xi[/KmeouX(Y8sX5c">
+                            <field name="TEXT">Keuze (1 / 2 / 3)</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="switch_case" id="BRq(=05UtX:(;B3]nRi_">
+                        <mutation order="0,0,0" default="1"></mutation>
+                        <value name="CONDITION">
+                          <block type="variables_get" id="-fz;5uwzQ*{vyW5F[=!L">
+                            <field name="VAR" id="-RLv._Y|OMUGc+WJCLnN" variabletype="">keuze</field>
+                          </block>
+                        </value>
+                        <value name="CASECONDITION0">
+                          <block type="math_number" id="h|*E?53rLe8aRGsYWtt#">
+                            <field name="NUM">1</field>
+                          </block>
+                        </value>
+                        <statement name="CASE0">
+                          <block type="text_print" id="^KHb,p;O(jXk_c`tDE1v">
+                            <value name="TEXT">
+                              <block type="round_to_decimals" id="0=(~Jl9RW7,ZQaQXGmES">
+                                <value name="amount">
+                                  <block type="math_arithmetic" id="1wGL0S^jDXOuOL%DVbcq">
+                                    <field name="OP">DIVIDE</field>
+                                    <value name="A">
+                                      <block type="variables_get" id="gGKFz5w.(y6ZN!?yC$E]">
+                                        <field name="VAR" id="}OOyux@$_mdW{njaWlMO" variabletype="">centimeters</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="math_number" id="+IR/%oan^E@W/zw0@bvh">
+                                        <field name="NUM">100</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="decimal">
+                                  <block type="math_number" id="(hau.27:$xNW@Y]@:rY+">
+                                    <field name="NUM">2</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                        <value name="CASECONDITION1">
+                          <block type="math_number" id="qEwD!BQA`.YE,.SM~;N)">
+                            <field name="NUM">2</field>
+                          </block>
+                        </value>
+                        <statement name="CASE1">
+                          <block type="text_print" id="0@bI$~BVs[_IlOplx,R@">
+                            <value name="TEXT">
+                              <block type="round_to_decimals" id=".BO1v`KTBfB`hhWti8!8">
+                                <value name="amount">
+                                  <block type="math_arithmetic" id="zmOy:|Zwvdr7C9zWr^~;">
+                                    <field name="OP">MULTIPLY</field>
+                                    <value name="A">
+                                      <block type="variables_get" id="{2Ig[vEFG#wl/.De.xxX">
+                                        <field name="VAR" id="}OOyux@$_mdW{njaWlMO" variabletype="">centimeters</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="math_number" id="Uhbf#/rP`#KL|w:e5`q3">
+                                        <field name="NUM">0.39</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="decimal">
+                                  <block type="math_number" id="5qvlB7^CA2A,-1?woajo">
+                                    <field name="NUM">2</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                        <value name="CASECONDITION2">
+                          <block type="math_number" id="WmN4jVT-.D(A{s4QQ29p">
+                            <field name="NUM">3</field>
+                          </block>
+                        </value>
+                        <statement name="CASE2">
+                          <block type="text_print" id="EflLt(-SagaD89B0,]W*">
+                            <value name="TEXT">
+                              <block type="round_to_decimals" id="j8{5A$5pvt|IXJFs|O5[">
+                                <value name="amount">
+                                  <block type="math_arithmetic" id="DDHa`7}]0D#zb^5T]g~l">
+                                    <field name="OP">MULTIPLY</field>
+                                    <value name="A">
+                                      <block type="variables_get" id="H71JreC~NGSrXf8c-+V=">
+                                        <field name="VAR" id="}OOyux@$_mdW{njaWlMO" variabletype="">centimeters</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="math_number" id="1O}BJaFv[(J6p?%rP6qs">
+                                        <field name="NUM">0.0328084</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="decimal">
+                                  <block type="math_number" id="z~J%s#ix1MKl|uI$CcCi">
+                                    <field name="NUM">2</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                        <statement name="ONDEFAULT">
+                          <block type="text_print" id="jAc{}3U59@a7)Xx.w0I`">
+                            <value name="TEXT">
+                              <block type="text" id="q,FemmyoYHXzp?-8lt5z">
+                                <field name="TEXT">Verkeerde keuze</field>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

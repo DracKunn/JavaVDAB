@@ -1,0 +1,80 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="}GpzZ!0I[08oqQaaWDm+">landCode</variable>
+  </variables>
+  <block type="variables_set" id="jIj#A,O0RB%g*[+)fb.U" x="7" y="54">
+    <field name="VAR" id="}GpzZ!0I[08oqQaaWDm+" variabletype="">landCode</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="KQn[c;5t5Dc~Y@Q:,{C@">
+        <mutation type="TEXT"></mutation>
+        <field name="TYPE">TEXT</field>
+        <value name="TEXT">
+          <block type="text" id="VE}X!JDl8aN^Q?3QG^4*">
+            <field name="TEXT">Landcode:</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="switch_case" id="T=9EbK!{$:|pUJ3f,R*l">
+        <mutation order="0,0,0" default="1"></mutation>
+        <value name="CONDITION">
+          <block type="variables_get" id="%s0+MC=l]`+_7k.n73X`">
+            <field name="VAR" id="}GpzZ!0I[08oqQaaWDm+" variabletype="">landCode</field>
+          </block>
+        </value>
+        <value name="CASECONDITION0">
+          <block type="text" id="gDJsOc*@A*S[6lRM#7|y">
+            <field name="TEXT">BE</field>
+          </block>
+        </value>
+        <statement name="CASE0">
+          <block type="text_print" id="p#z)zALb|_O6e_/O,i/,">
+            <value name="TEXT">
+              <block type="text" id="JBvZr0u6=KR6,6zI[CaU">
+                <field name="TEXT">België</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <value name="CASECONDITION1">
+          <block type="text" id="D4OB_!T)%Hr#swJA^6F5">
+            <field name="TEXT">NL</field>
+          </block>
+        </value>
+        <statement name="CASE1">
+          <block type="text_print" id="?^5l)biGcOmJx?fbodhd">
+            <value name="TEXT">
+              <block type="text" id="TD}amD#s}Wh6E~O,Q/x@">
+                <field name="TEXT">Nederland</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <value name="CASECONDITION2">
+          <block type="text" id="mBOkVdU.b6(~FeX8|9d/">
+            <field name="TEXT">FR</field>
+          </block>
+        </value>
+        <statement name="CASE2">
+          <block type="text_print" id="X5;$@I2:iccFJ[w[5,^F">
+            <value name="TEXT">
+              <block type="text" id="_%nBIE[[E.lf}*RO#AFD">
+                <field name="TEXT">Frankrijk</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <statement name="ONDEFAULT">
+          <block type="text_print" id="?vQcYEJ1^HQ,pbWt)^ji">
+            <value name="TEXT">
+              <block type="text" id="H4D!zu!-?hra/pxz*c4w">
+                <field name="TEXT">Onbekende code.</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

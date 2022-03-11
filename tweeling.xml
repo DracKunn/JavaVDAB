@@ -1,0 +1,32 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id=")Js+t9Fea3L}42Hsc*+!">aantalKinderen</variable>
+  </variables>
+  <block type="variables_set" id="U{s:;*FU##G0)F@IErX6" x="6" y="57">
+    <field name="VAR" id=")Js+t9Fea3L}42Hsc*+!" variabletype="">aantalKinderen</field>
+    <value name="VALUE">
+      <block type="math_number" id="#ttl7t@*fRMv*CU`nGFp">
+        <field name="NUM">3</field>
+      </block>
+    </value>
+    <next>
+      <block type="math_change" id="LEH%LfvR+Zc`1rQu-}!D">
+        <field name="VAR" id=")Js+t9Fea3L}42Hsc*+!" variabletype="">aantalKinderen</field>
+        <value name="DELTA">
+          <shadow type="math_number" id="k0ztKzISpbsQx%5s~=E)">
+            <field name="NUM">2</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="text_print" id="G-Ke;]5}+OImv)7X$pF-">
+            <value name="TEXT">
+              <block type="variables_get" id="nuy^7,iX_-qyMD!g#npd">
+                <field name="VAR" id=")Js+t9Fea3L}42Hsc*+!" variabletype="">aantalKinderen</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

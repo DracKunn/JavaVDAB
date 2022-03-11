@@ -1,0 +1,237 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="+I$[Fv.KQN7Q;r4U/n:|">eersteGetal</variable>
+    <variable type="" id="tK8%?.09UKE$517OzDfx">tweedeGetal</variable>
+  </variables>
+  <block type="variables_set" id="DnoD46bP6c~ynAO!+%f@" x="8" y="33">
+    <field name="VAR" id="+I$[Fv.KQN7Q;r4U/n:|" variabletype="">eersteGetal</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="Ojj?(N8sZ~h.NfW~y2{:">
+        <mutation type="NUMBER"></mutation>
+        <field name="TYPE">NUMBER</field>
+        <value name="TEXT">
+          <block type="text" id="+H$PikQHn^sfgbwE)d@?">
+            <field name="TEXT">Geef een eerste getal in:</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="M-7D~Nj?eaXTx?j/Q}be">
+        <field name="VAR" id="tK8%?.09UKE$517OzDfx" variabletype="">tweedeGetal</field>
+        <value name="VALUE">
+          <block type="text_prompt_ext" id="Jps,6c;3H!*m)=%#y(-e">
+            <mutation type="NUMBER"></mutation>
+            <field name="TYPE">NUMBER</field>
+            <value name="TEXT">
+              <block type="text" id="@?u5P(6,759D)HAz*nM(">
+                <field name="TEXT">Geef een tweede getal in:</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="controls_if" id="D8I/Z7+Eh23+j+~co)R)">
+            <value name="IF0">
+              <block type="logic_compare" id="LZHjr4Si7iU]WT]yaO6,">
+                <field name="OP">LT</field>
+                <value name="A">
+                  <block type="variables_get" id="n=Jud1:lor)1yv}ZAj($">
+                    <field name="VAR" id="+I$[Fv.KQN7Q;r4U/n:|" variabletype="">eersteGetal</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="variables_get" id=";dioc#I!4xIfjOm$2fq~">
+                    <field name="VAR" id="tK8%?.09UKE$517OzDfx" variabletype="">tweedeGetal</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="controls_if" id="6%lkqvEfag2k`Wpu|tNg">
+                <mutation else="1"></mutation>
+                <value name="IF0">
+                  <block type="logic_compare" id="v@5_^624{xh9SI-=WsWs">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="variables_get" id="*.+u]70Uv5kzt-uy^DdM">
+                        <field name="VAR" id="+I$[Fv.KQN7Q;r4U/n:|" variabletype="">eersteGetal</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="kP+:$kEUiZ}eJy]DV{D^">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="text_print" id="d4U?KN#[B/?vL]TJ~ng7">
+                    <value name="TEXT">
+                      <block type="text" id="yw~YhW6n+JL#)iswhfFw">
+                        <field name="TEXT">Delen door 0 onmogelijk.</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <statement name="ELSE">
+                  <block type="text_print" id="!?LEfvz.U8_w[vaxB~=*">
+                    <value name="TEXT">
+                      <block type="math_arithmetic" id="izaEY_;M_.rx)hFNjfWG">
+                        <field name="OP">DIVIDE</field>
+                        <value name="A">
+                          <block type="variables_get" id="i0*nKxo9y)iCEwj!w@aj">
+                            <field name="VAR" id="tK8%?.09UKE$517OzDfx" variabletype="">tweedeGetal</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="variables_get" id="muY(^O2bTi?~35f_HEf)">
+                            <field name="VAR" id="+I$[Fv.KQN7Q;r4U/n:|" variabletype="">eersteGetal</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+              </block>
+            </statement>
+            <next>
+              <block type="controls_if" id="FTE.Ld/p71^;zZlHf.rb">
+                <value name="IF0">
+                  <block type="logic_compare" id="s#bFLQ=Z]Lbdn_Dd+7yv">
+                    <field name="OP">GT</field>
+                    <value name="A">
+                      <block type="variables_get" id="5SKUh1)e@IoByHKB#SIO">
+                        <field name="VAR" id="+I$[Fv.KQN7Q;r4U/n:|" variabletype="">eersteGetal</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="variables_get" id="aHccpI,1:A`|c$le[l9m">
+                        <field name="VAR" id="tK8%?.09UKE$517OzDfx" variabletype="">tweedeGetal</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="controls_if" id="cl5?dB??fS5XUF0@5X*d">
+                    <mutation else="1"></mutation>
+                    <value name="IF0">
+                      <block type="logic_compare" id="3LE6UQ0z1FOu[z*q1r.Q">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="variables_get" id="_APt@b$ph~/.?}-,3bl(">
+                            <field name="VAR" id="tK8%?.09UKE$517OzDfx" variabletype="">tweedeGetal</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="R/I:#CcEz4v]=tJFl[{k">
+                            <field name="NUM">0</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="text_print" id="Q1kVjkLob#ldF%@?B-39">
+                        <value name="TEXT">
+                          <block type="text" id="HgR%$7z~B|[|O/Y?NC*k">
+                            <field name="TEXT">Delen door 0 onmogelijk.</field>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                    <statement name="ELSE">
+                      <block type="text_print" id="#hO/K25]A8i?3xQWR7r%">
+                        <value name="TEXT">
+                          <block type="math_arithmetic" id=",:24+]Lc[ifs*ws8vn=s">
+                            <field name="OP">DIVIDE</field>
+                            <value name="A">
+                              <block type="variables_get" id="WC$`u[[1N^Z#rc6Fu@dC">
+                                <field name="VAR" id="+I$[Fv.KQN7Q;r4U/n:|" variabletype="">eersteGetal</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="variables_get" id=":UUrScPZ(r!72MqZ[933">
+                                <field name="VAR" id="tK8%?.09UKE$517OzDfx" variabletype="">tweedeGetal</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                  </block>
+                </statement>
+                <next>
+                  <block type="controls_if" id="U`J(l%PP)T[YCyIL]f1u">
+                    <value name="IF0">
+                      <block type="logic_compare" id="a5rbY.]DIQ%$qk2RDRXa">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="variables_get" id="V~,wyac($|ZMWMO7BWyx">
+                            <field name="VAR" id="+I$[Fv.KQN7Q;r4U/n:|" variabletype="">eersteGetal</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="variables_get" id="#r$JeEyWZB-Zz:RAaY3g">
+                            <field name="VAR" id="tK8%?.09UKE$517OzDfx" variabletype="">tweedeGetal</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="controls_if" id="K:ReS^=sE[Sc/#iwD=*W">
+                        <mutation else="1"></mutation>
+                        <value name="IF0">
+                          <block type="logic_compare" id="|P0Aq[!}0$k#p]Nc4U|9">
+                            <field name="OP">EQ</field>
+                            <value name="A">
+                              <block type="variables_get" id="_5{^v7?OA=6*NX_*uobN">
+                                <field name="VAR" id="+I$[Fv.KQN7Q;r4U/n:|" variabletype="">eersteGetal</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="l;a*fC/I{-7j+wCRHFUs">
+                                <field name="NUM">0</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="text_print" id="v{p|^Q},?b`?PEy#e|}r">
+                            <value name="TEXT">
+                              <block type="text" id=";8MOP?Y1c%Mo:tA;:p8I">
+                                <field name="TEXT">Delen door 0 onmogelijk.</field>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                        <statement name="ELSE">
+                          <block type="text_print" id="lAn}qzFmmbi+gP::vy#5">
+                            <value name="TEXT">
+                              <block type="math_arithmetic" id="D$o+jAqpTp9%GDQ[Zu$^">
+                                <field name="OP">DIVIDE</field>
+                                <value name="A">
+                                  <block type="variables_get" id="nrL?a7iA.irbVM4S~}*A">
+                                    <field name="VAR" id="+I$[Fv.KQN7Q;r4U/n:|" variabletype="">eersteGetal</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="variables_get" id=".u;s))mgW8WK`Gq|h`}%">
+                                    <field name="VAR" id="tK8%?.09UKE$517OzDfx" variabletype="">tweedeGetal</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

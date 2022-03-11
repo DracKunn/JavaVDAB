@@ -1,0 +1,43 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="@q~)2tOQ!9HXb#3F8=qB">gewonnenBedrag</variable>
+    <variable type="" id="gLtsDP!rPL`=?{:R?1)q">aantalVrienden</variable>
+  </variables>
+  <block type="variables_set" id="86y6`FY2j.:w8J1gTrF," x="22" y="35">
+    <field name="VAR" id="@q~)2tOQ!9HXb#3F8=qB" variabletype="">gewonnenBedrag</field>
+    <value name="VALUE">
+      <block type="math_number" id="tS!T]9Ac=ZR_T%rMqtjo">
+        <field name="NUM">1000</field>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="ii0VWtzyp@)cU$Rd3o;z">
+        <field name="VAR" id="gLtsDP!rPL`=?{:R?1)q" variabletype="">aantalVrienden</field>
+        <value name="VALUE">
+          <block type="math_number" id="mc;jyN!nMsF4`a+pa0S(">
+            <field name="NUM">4</field>
+          </block>
+        </value>
+        <next>
+          <block type="text_print" id="oY$jSn4|yTAK4n2kqrkx">
+            <value name="TEXT">
+              <block type="math_arithmetic" id="H|x(6FuN9#]{DyZD2PeC">
+                <field name="OP">DIVIDE</field>
+                <value name="A">
+                  <block type="variables_get" id="^vs#T%3U+V3g9Q--fxx*">
+                    <field name="VAR" id="@q~)2tOQ!9HXb#3F8=qB" variabletype="">gewonnenBedrag</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="variables_get" id="QB.XhKo%MypbW:;(ng8b">
+                    <field name="VAR" id="gLtsDP!rPL`=?{:R?1)q" variabletype="">aantalVrienden</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
